@@ -118,42 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 352</value>
-  </data>
-  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 31</value>
-  </data>
-  <data name="saveButton.Text" xml:space="preserve">
-    <value>SAČUVAJ</value>
-  </data>
-  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
-  </data>
-  <data name="nameLabel.Text" xml:space="preserve">
-    <value>Naziv</value>
-  </data>
-  <data name="addressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
-  </data>
-  <data name="addressLabel.Text" xml:space="preserve">
-    <value>Adresa</value>
-  </data>
-  <data name="phoneLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
-  </data>
-  <data name="phoneLabel.Text" xml:space="preserve">
-    <value>Broj telefona</value>
-  </data>
-  <data name="booksLabel.Text" xml:space="preserve">
-    <value>Knjige</value>
-  </data>
-  <data name="publisherLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 25</value>
-  </data>
-  <data name="publisherLabel.Text" xml:space="preserve">
-    <value>Modifikacija izdavača</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1285,8 +1249,5 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Modifikuj forma - Izdavač</value>
   </data>
 </root>

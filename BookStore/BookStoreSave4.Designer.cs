@@ -40,12 +40,12 @@ namespace BookStore
             this.bookStoreComboBox = new System.Windows.Forms.ComboBox();
             this.bookStoreLabel = new System.Windows.Forms.Label();
             this.saveInBookStoreLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.clearButton);
@@ -56,6 +56,7 @@ namespace BookStore
             this.panel1.Controls.Add(this.quantityLabel);
             this.panel1.Controls.Add(this.bookStoreComboBox);
             this.panel1.Controls.Add(this.bookStoreLabel);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // clearButton
@@ -110,6 +111,11 @@ namespace BookStore
             resources.ApplyResources(this.saveInBookStoreLabel, "saveInBookStoreLabel");
             this.saveInBookStoreLabel.Name = "saveInBookStoreLabel";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // BookStoreSave4
             // 
             resources.ApplyResources(this, "$this");
@@ -117,6 +123,7 @@ namespace BookStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.saveInBookStoreLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "BookStoreSave4";
             this.Load += new System.EventHandler(this.BookStoreSave4_Load);
             this.panel1.ResumeLayout(false);
@@ -138,5 +145,6 @@ namespace BookStore
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

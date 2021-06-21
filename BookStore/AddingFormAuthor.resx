@@ -130,9 +130,6 @@
   <data name="clearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
-  <data name="birthPlaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 256</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dateOfBirthTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -140,11 +137,18 @@
   <data name="&gt;&gt;dateOfBirthLabel.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="birthPlaceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;birthPlaceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dateOfBirthTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="dateOfBirthTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 192</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dateOfBirthTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -152,11 +156,11 @@
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;birthPlaceLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="firstNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 22</value>
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 336</value>
   </data>
   <data name="clearButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -164,8 +168,8 @@
   <data name="clearButton.Text" xml:space="preserve">
     <value>CLEAR</value>
   </data>
-  <data name="&gt;&gt;dateOfBirthTextBox.Name" xml:space="preserve">
-    <value>dateOfBirthTextBox</value>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 336</value>
@@ -176,11 +180,17 @@
   <data name="&gt;&gt;newAuthorLabel.Name" xml:space="preserve">
     <value>newAuthorLabel</value>
   </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="&gt;&gt;clearButton.Name" xml:space="preserve">
     <value>clearButton</value>
   </data>
-  <data name="&gt;&gt;birthPlaceTextBox.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="saveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="newAuthorLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -197,65 +207,80 @@
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>336, 376</value>
   </data>
-  <data name="dateOfBirthLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="birthPlaceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;birthPlaceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;firstNameLabel.Name" xml:space="preserve">
-    <value>firstNameLabel</value>
+  <data name="lastNameLabel.Text" xml:space="preserve">
+    <value>Last name</value>
   </data>
   <data name="&gt;&gt;newAuthorLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="birthPlaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 256</value>
+  </data>
+  <data name="&gt;&gt;birthPlaceLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;dateOfBirthTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="saveButton.Text" xml:space="preserve">
     <value>SAVE</value>
+  </data>
+  <data name="&gt;&gt;clearButton.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="birthPlaceLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 256</value>
   </data>
-  <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 64</value>
+  <data name="&gt;&gt;lastNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;birthPlaceTextBox.Name" xml:space="preserve">
     <value>birthPlaceTextBox</value>
   </data>
-  <data name="firstNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="dateOfBirthLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="birthPlaceLabel.Text" xml:space="preserve">
     <value>Birth place</value>
   </data>
-  <data name="&gt;&gt;lastNameLabel.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
-    <value>saveButton</value>
-  </data>
   <data name="&gt;&gt;firstNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+  <data name="&gt;&gt;lastNameLabel.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;birthPlaceTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;newAuthorLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dateOfBirthLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;birthPlaceTextBox.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lastNameTextBox.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="dateOfBirthLabel.Text" xml:space="preserve">
     <value>Date of birth</value>
-  </data>
-  <data name="&gt;&gt;lastNameLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;firstNameTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -266,8 +291,17 @@
   <data name="&gt;&gt;firstNameLabel.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;birthPlaceTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="firstNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="birthPlaceTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 64</value>
+  </data>
+  <data name="lastNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;dateOfBirthTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -275,8 +309,8 @@
   <data name="&gt;&gt;lastNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;birthPlaceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dateOfBirthTextBox.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;lastNameTextBox.Name" xml:space="preserve">
     <value>lastNameTextBox</value>
@@ -299,11 +333,14 @@
   <data name="newAuthorLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lastNameLabel.Text" xml:space="preserve">
-    <value>Last name</value>
+  <data name="firstNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 22</value>
   </data>
-  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="birthPlaceLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -311,23 +348,32 @@
   <data name="dateOfBirthLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;birthPlaceLabel.Name" xml:space="preserve">
     <value>birthPlaceLabel</value>
   </data>
   <data name="lastNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
+  <data name="clearButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="&gt;&gt;firstNameTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;clearButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
+    <value>saveButton</value>
   </data>
-  <data name="&gt;&gt;newAuthorLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lastNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1467,14 +1513,17 @@
   <data name="lastNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="firstNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;firstNameTextBox.Name" xml:space="preserve">
     <value>firstNameTextBox</value>
   </data>
-  <data name="lastNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="dateOfBirthLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 192</value>
@@ -1494,11 +1543,20 @@
   <data name="firstNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
   </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>368, 488</value>
+  </data>
+  <data name="firstNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="newAuthorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 25</value>
   </data>
   <data name="lastNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="lastNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1518,8 +1576,11 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 88</value>
   </data>
-  <data name="&gt;&gt;dateOfBirthTextBox.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="firstNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="firstNameLabel.Text" xml:space="preserve">
     <value>First name</value>
@@ -1527,11 +1588,14 @@
   <data name="$this.Text" xml:space="preserve">
     <value>AddingForm - Author</value>
   </data>
-  <data name="&gt;&gt;lastNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lastNameLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="newAuthorLabel.Text" xml:space="preserve">
     <value>New Author</value>
+  </data>
+  <data name="&gt;&gt;firstNameLabel.Name" xml:space="preserve">
+    <value>firstNameLabel</value>
   </data>
   <data name="&gt;&gt;newAuthorLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1539,8 +1603,8 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>368, 482</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="newAuthorLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="birthPlaceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1548,14 +1612,14 @@
   <data name="birthPlaceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="lastNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 128</value>
   </data>
-  <data name="&gt;&gt;clearButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 336</value>
+  <data name="&gt;&gt;dateOfBirthTextBox.Name" xml:space="preserve">
+    <value>dateOfBirthTextBox</value>
   </data>
   <data name="birthPlaceLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

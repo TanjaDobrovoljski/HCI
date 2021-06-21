@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace BookStore
 {
@@ -18,12 +19,28 @@ namespace BookStore
         private int tipKorisnika;
         private string userName;
         private static int i = 0;
+        
 
         public AdminForm()
         {
             InitializeComponent();
 
-            this.AutoSize = true;
+           
+            
+            toolStripContainer1.Dock = DockStyle.Fill;
+            listPanel1.Anchor = AnchorStyles.Right;
+            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+
+            if (Thread.CurrentThread.CurrentCulture.Name!= "sr-Latn")
+            {
+                logoutButton1.Text = "ODJAVA";
+                showListLabel.Text = "Prikazi listu:";
+                modifyButton.Text = "Modifikacija";
+                deleteButton.Text = "Obriši";
+
+            }
+
+
 
 
 
@@ -36,8 +53,22 @@ namespace BookStore
             this.userName = userName;
             modifyButton.Enabled = false;
             deleteButton.Enabled = false;
-            this.AutoSize = true;
-            listPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            
+            
+            toolStripContainer1.Dock = DockStyle.Fill;
+            listPanel1.Anchor = AnchorStyles.Right;
+            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            if (Thread.CurrentThread.CurrentCulture.Name != "sr-Latn")
+            {
+                logoutButton1.Text = "ODJAVA";
+                showListLabel.Text = "Prikazi listu:";
+                modifyButton.Text = "Modifikacija";
+                deleteButton.Text = "Obriši";
+
+            }
+
+
+
 
 
 
@@ -46,7 +77,18 @@ namespace BookStore
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.AutoSize = true;
+            toolStripContainer1.Dock = DockStyle.Fill;
+            listPanel1.Anchor = AnchorStyles.Right;
+            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            if (Thread.CurrentThread.CurrentCulture.Name != "sr-Latn")
+            {
+                logoutButton1.Text = "ODJAVA";
+                showListLabel.Text = "Prikazi listu:";
+                modifyButton.Text = "Modifikacija";
+                deleteButton.Text = "Obriši";
+
+            }
+
             if (i == 0)
                 showUser();
             else if (i == 1)
@@ -659,12 +701,18 @@ namespace BookStore
         {
             if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Form1 f = new Form1();
-                f.ShowDialog();
+                this.Hide();
+
+                Application.Exit();
             }
         }
 
         private void userLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addUser_Paint(object sender, PaintEventArgs e)
         {
 
         }

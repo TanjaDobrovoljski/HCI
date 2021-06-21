@@ -40,6 +40,7 @@ namespace BookStore
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.addLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +110,11 @@ namespace BookStore
             resources.ApplyResources(this.addLabel, "addLabel");
             this.addLabel.Name = "addLabel";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // AddingFormUser
             // 
             resources.ApplyResources(this, "$this");
@@ -116,6 +122,7 @@ namespace BookStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.addLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddingFormUser";
             this.Load += new System.EventHandler(this.AddingFormUser_Load);
             this.panel1.ResumeLayout(false);
@@ -137,5 +144,6 @@ namespace BookStore
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

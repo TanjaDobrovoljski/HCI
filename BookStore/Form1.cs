@@ -149,14 +149,17 @@ namespace BookStore
                         Console.WriteLine(admin);
                         if (admin == 1)
                         {
+
+                            // Form3 f3 = new Form3(1, userName);
                             this.Hide();
-                            //Form3 f3 = new Form3(1, userName);
                             AdminForm f3 = new AdminForm(1, userName);
                             f3.ShowDialog();
+                            this.Close();
                             this.usernameText.Text = "";
                             this.passwordText.Text = "";
-                            ActiveControl = this.usernameText;
-                            this.Show();
+                           // ActiveControl = this.usernameText;
+                            
+                            //this.Show();
 
 
                         }
@@ -215,6 +218,13 @@ namespace BookStore
         private void usernameText_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void englishButton_Click_1(object sender, EventArgs e)
+        {
+            var changeLanguage = new ChangeLanguage();
+            changeLanguage.UpdateConfig("language", "en");
+            Application.Restart();
         }
     }
 }

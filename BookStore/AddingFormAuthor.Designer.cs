@@ -42,6 +42,7 @@ namespace BookStore
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.birthPlaceTextBox = new System.Windows.Forms.TextBox();
             this.newAuthorLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +124,12 @@ namespace BookStore
             resources.ApplyResources(this.newAuthorLabel, "newAuthorLabel");
             this.newAuthorLabel.Name = "newAuthorLabel";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
             // AddingFormAuthor
             // 
             resources.ApplyResources(this, "$this");
@@ -130,6 +137,7 @@ namespace BookStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.newAuthorLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddingFormAuthor";
             this.Load += new System.EventHandler(this.AddingFormAuthor_Load);
             this.panel1.ResumeLayout(false);
@@ -153,5 +161,6 @@ namespace BookStore
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.TextBox dateOfBirthTextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

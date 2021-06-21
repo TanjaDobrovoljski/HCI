@@ -42,12 +42,12 @@ namespace BookStore
             this.addressLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.newBookStoreLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.clearButton);
@@ -60,6 +60,7 @@ namespace BookStore
             this.panel1.Controls.Add(this.workTimeLabel);
             this.panel1.Controls.Add(this.addressLabel);
             this.panel1.Controls.Add(this.nameLabel);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // clearButton
@@ -125,6 +126,11 @@ namespace BookStore
             resources.ApplyResources(this.newBookStoreLabel, "newBookStoreLabel");
             this.newBookStoreLabel.Name = "newBookStoreLabel";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // AddingFormBookStore
             // 
             resources.ApplyResources(this, "$this");
@@ -132,6 +138,7 @@ namespace BookStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.newBookStoreLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddingFormBookStore";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -154,5 +161,6 @@ namespace BookStore
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

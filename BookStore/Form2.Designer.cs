@@ -44,7 +44,9 @@ namespace BookStore
             this.showAllButton = new System.Windows.Forms.Button();
             this.bookStoreInfromation = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logo
@@ -152,6 +154,13 @@ namespace BookStore
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.Controls.Add(this.searchPublisherText, 0, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
@@ -161,7 +170,6 @@ namespace BookStore
             this.Controls.Add(this.showAllButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.storeLetter);
-            this.Controls.Add(this.searchPublisherText);
             this.Controls.Add(this.searchPublisherBox);
             this.Controls.Add(this.bookstoreLetter);
             this.Controls.Add(this.searchAuthorText);
@@ -170,10 +178,13 @@ namespace BookStore
             this.Controls.Add(this.searchTitleBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.logo);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +205,6 @@ namespace BookStore
         private System.Windows.Forms.Button showAllButton;
         private System.Windows.Forms.Label bookStoreInfromation;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

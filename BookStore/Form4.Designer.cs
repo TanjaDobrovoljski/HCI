@@ -34,37 +34,37 @@ namespace BookStore
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.showListLabel = new System.Windows.Forms.Label();
-            this.modifyButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.logoutButton = new System.Windows.Forms.Button();
-            this.listPanel = new System.Windows.Forms.Panel();
+            this.logoutButton1 = new System.Windows.Forms.Button();
+            this.listPanel1 = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.ComboBox();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.modifyButton = new System.Windows.Forms.Button();
+            this.showListLabel = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.addBookStore = new System.Windows.Forms.Panel();
-            this.addBookStoreButton = new System.Windows.Forms.Button();
             this.bookstoreLabel = new System.Windows.Forms.Label();
+            this.addBookStoreButton = new System.Windows.Forms.Button();
             this.addPublisher = new System.Windows.Forms.Panel();
-            this.publisherLabel = new System.Windows.Forms.Label();
             this.addPublisherButton = new System.Windows.Forms.Button();
-            this.addBook = new System.Windows.Forms.Panel();
-            this.bookLabel = new System.Windows.Forms.Label();
-            this.addBookButton = new System.Windows.Forms.Button();
-            this.addAuthor = new System.Windows.Forms.Panel();
-            this.authorLabel = new System.Windows.Forms.Label();
-            this.addAuthorButton = new System.Windows.Forms.Button();
+            this.publisherLabel = new System.Windows.Forms.Label();
             this.addUser = new System.Windows.Forms.Panel();
             this.addUserButton = new System.Windows.Forms.Button();
             this.userLabel = new System.Windows.Forms.Label();
+            this.addBook = new System.Windows.Forms.Panel();
+            this.addBookButton = new System.Windows.Forms.Button();
+            this.bookLabel = new System.Windows.Forms.Label();
+            this.addAuthor = new System.Windows.Forms.Panel();
+            this.authorLabel = new System.Windows.Forms.Label();
+            this.addAuthorButton = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.listPanel.SuspendLayout();
+            this.listPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.addBookStore.SuspendLayout();
             this.addPublisher.SuspendLayout();
+            this.addUser.SuspendLayout();
             this.addBook.SuspendLayout();
             this.addAuthor.SuspendLayout();
-            this.addUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -75,14 +75,14 @@ namespace BookStore
             this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.toolStripContainer1.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.logoutButton);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.listPanel);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.logoutButton1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.listPanel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addBookStore);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addPublisher);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addUser);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addBook);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addAuthor);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1664, 839);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1112, 560);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -90,74 +90,44 @@ namespace BookStore
             // toolStripContainer1.RightToolStripPanel
             // 
             this.toolStripContainer1.RightToolStripPanel.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.toolStripContainer1.Size = new System.Drawing.Size(1664, 864);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1112, 560);
             this.toolStripContainer1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(304, 0);
+            this.panel1.Location = new System.Drawing.Point(384, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(24, 1500);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(24, 569);
+            this.panel1.TabIndex = 9;
             // 
-            // showListLabel
+            // logoutButton1
             // 
-            this.showListLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.showListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showListLabel.Location = new System.Drawing.Point(368, 8);
-            this.showListLabel.Name = "showListLabel";
-            this.showListLabel.Size = new System.Drawing.Size(112, 23);
-            this.showListLabel.TabIndex = 3;
-            this.showListLabel.Text = "Show list:";
+            this.logoutButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.logoutButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.logoutButton1.Location = new System.Drawing.Point(8, 931);
+            this.logoutButton1.Name = "logoutButton1";
+            this.logoutButton1.Size = new System.Drawing.Size(120, 32);
+            this.logoutButton1.TabIndex = 0;
+            this.logoutButton1.Text = "LOGOUT";
+            this.logoutButton1.UseVisualStyleBackColor = true;
+            this.logoutButton1.Click += new System.EventHandler(this.logout_Click);
             // 
-            // modifyButton
+            // listPanel1
             // 
-            this.modifyButton.Location = new System.Drawing.Point(440, 360);
-            this.modifyButton.Name = "modifyButton";
-            this.modifyButton.Size = new System.Drawing.Size(75, 24);
-            this.modifyButton.TabIndex = 2;
-            this.modifyButton.Text = "Modify";
-            this.modifyButton.UseVisualStyleBackColor = true;
-            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteButton.Location = new System.Drawing.Point(544, 360);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 25);
-            this.deleteButton.TabIndex = 1;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.logoutButton.Location = new System.Drawing.Point(8, 504);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(88, 32);
-            this.logoutButton.TabIndex = 0;
-            this.logoutButton.Text = "LOGOUT";
-            this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logout_Click);
-            // 
-            // listPanel
-            // 
-            this.listPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.listPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.listPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listPanel.Controls.Add(this.searchBox);
-            this.listPanel.Controls.Add(this.deleteButton);
-            this.listPanel.Controls.Add(this.modifyButton);
-            this.listPanel.Controls.Add(this.showListLabel);
-            this.listPanel.Controls.Add(this.dataGridView);
-            this.listPanel.Location = new System.Drawing.Point(384, 48);
-            this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(632, 392);
-            this.listPanel.TabIndex = 2;
+            this.listPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.listPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.listPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listPanel1.Controls.Add(this.searchBox);
+            this.listPanel1.Controls.Add(this.deleteButton);
+            this.listPanel1.Controls.Add(this.modifyButton);
+            this.listPanel1.Controls.Add(this.showListLabel);
+            this.listPanel1.Controls.Add(this.dataGridView);
+            this.listPanel1.Location = new System.Drawing.Point(1362, 56);
+            this.listPanel1.Name = "listPanel1";
+            this.listPanel1.Size = new System.Drawing.Size(688, 400);
+            this.listPanel1.TabIndex = 8;
             // 
             // searchBox
             // 
@@ -170,22 +140,53 @@ namespace BookStore
             "Books",
             "Publishers",
             "Book Stores"});
-            this.searchBox.Location = new System.Drawing.Point(496, 8);
+            this.searchBox.Location = new System.Drawing.Point(550, 8);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(121, 24);
             this.searchBox.TabIndex = 4;
             this.searchBox.SelectedIndexChanged += new System.EventHandler(this.searchBox_SelectedIndexChanged);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteButton.Location = new System.Drawing.Point(598, 360);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(75, 25);
+            this.deleteButton.TabIndex = 1;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // modifyButton
+            // 
+            this.modifyButton.Location = new System.Drawing.Point(504, 360);
+            this.modifyButton.Name = "modifyButton";
+            this.modifyButton.Size = new System.Drawing.Size(75, 24);
+            this.modifyButton.TabIndex = 2;
+            this.modifyButton.Text = "Modify";
+            this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.modifyButton_Click);
+            // 
+            // showListLabel
+            // 
+            this.showListLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.showListLabel.Location = new System.Drawing.Point(422, 8);
+            this.showListLabel.Name = "showListLabel";
+            this.showListLabel.Size = new System.Drawing.Size(112, 23);
+            this.showListLabel.TabIndex = 3;
+            this.showListLabel.Text = "Show list:";
             // 
             // dataGridView
             // 
             this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(16, 72);
+            this.dataGridView.Location = new System.Drawing.Point(14, 56);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(600, 248);
+            this.dataGridView.Size = new System.Drawing.Size(656, 280);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
@@ -199,6 +200,15 @@ namespace BookStore
             this.addBookStore.Size = new System.Drawing.Size(256, 56);
             this.addBookStore.TabIndex = 3;
             // 
+            // bookstoreLabel
+            // 
+            this.bookstoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.bookstoreLabel.Location = new System.Drawing.Point(72, 16);
+            this.bookstoreLabel.Name = "bookstoreLabel";
+            this.bookstoreLabel.Size = new System.Drawing.Size(168, 23);
+            this.bookstoreLabel.TabIndex = 1;
+            this.bookstoreLabel.Text = "+ Add Book Store";
+            // 
             // addBookStoreButton
             // 
             this.addBookStoreButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addBookStoreButton.BackgroundImage")));
@@ -210,15 +220,6 @@ namespace BookStore
             this.addBookStoreButton.UseVisualStyleBackColor = true;
             this.addBookStoreButton.Click += new System.EventHandler(this.addBookStoreButton_Click);
             // 
-            // bookstoreLabel
-            // 
-            this.bookstoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookstoreLabel.Location = new System.Drawing.Point(72, 16);
-            this.bookstoreLabel.Name = "bookstoreLabel";
-            this.bookstoreLabel.Size = new System.Drawing.Size(168, 23);
-            this.bookstoreLabel.TabIndex = 1;
-            this.bookstoreLabel.Text = "+ Add Book Store";
-            // 
             // addPublisher
             // 
             this.addPublisher.BackColor = System.Drawing.Color.Transparent;
@@ -228,15 +229,6 @@ namespace BookStore
             this.addPublisher.Name = "addPublisher";
             this.addPublisher.Size = new System.Drawing.Size(248, 56);
             this.addPublisher.TabIndex = 4;
-            // 
-            // publisherLabel
-            // 
-            this.publisherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publisherLabel.Location = new System.Drawing.Point(72, 16);
-            this.publisherLabel.Name = "publisherLabel";
-            this.publisherLabel.Size = new System.Drawing.Size(160, 23);
-            this.publisherLabel.TabIndex = 0;
-            this.publisherLabel.Text = "+ Add Publisher";
             // 
             // addPublisherButton
             // 
@@ -249,6 +241,46 @@ namespace BookStore
             this.addPublisherButton.UseVisualStyleBackColor = true;
             this.addPublisherButton.Click += new System.EventHandler(this.addPublisherButton_Click);
             // 
+            // publisherLabel
+            // 
+            this.publisherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.publisherLabel.Location = new System.Drawing.Point(72, 16);
+            this.publisherLabel.Name = "publisherLabel";
+            this.publisherLabel.Size = new System.Drawing.Size(160, 23);
+            this.publisherLabel.TabIndex = 0;
+            this.publisherLabel.Text = "+ Add Publisher";
+            // 
+            // addUser
+            // 
+            this.addUser.BackColor = System.Drawing.Color.Transparent;
+            this.addUser.Controls.Add(this.addUserButton);
+            this.addUser.Controls.Add(this.userLabel);
+            this.addUser.Location = new System.Drawing.Point(8, 48);
+            this.addUser.Name = "addUser";
+            this.addUser.Size = new System.Drawing.Size(248, 56);
+            this.addUser.TabIndex = 7;
+            this.addUser.Paint += new System.Windows.Forms.PaintEventHandler(this.addUser_Paint);
+            // 
+            // addUserButton
+            // 
+            this.addUserButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addUserButton.BackgroundImage")));
+            this.addUserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addUserButton.Location = new System.Drawing.Point(0, 0);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(64, 56);
+            this.addUserButton.TabIndex = 0;
+            this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
+            // userLabel
+            // 
+            this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.userLabel.Location = new System.Drawing.Point(72, 16);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(160, 23);
+            this.userLabel.TabIndex = 1;
+            this.userLabel.Text = "+ Add User";
+            // 
             // addBook
             // 
             this.addBook.BackColor = System.Drawing.Color.Transparent;
@@ -258,15 +290,6 @@ namespace BookStore
             this.addBook.Name = "addBook";
             this.addBook.Size = new System.Drawing.Size(224, 56);
             this.addBook.TabIndex = 5;
-            // 
-            // bookLabel
-            // 
-            this.bookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookLabel.Location = new System.Drawing.Point(72, 16);
-            this.bookLabel.Name = "bookLabel";
-            this.bookLabel.Size = new System.Drawing.Size(136, 23);
-            this.bookLabel.TabIndex = 0;
-            this.bookLabel.Text = "+ Add Book";
             // 
             // addBookButton
             // 
@@ -278,6 +301,15 @@ namespace BookStore
             this.addBookButton.TabIndex = 1;
             this.addBookButton.UseVisualStyleBackColor = true;
             this.addBookButton.Click += new System.EventHandler(this.addBookButton_Click);
+            // 
+            // bookLabel
+            // 
+            this.bookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.bookLabel.Location = new System.Drawing.Point(96, 16);
+            this.bookLabel.Name = "bookLabel";
+            this.bookLabel.Size = new System.Drawing.Size(136, 23);
+            this.bookLabel.TabIndex = 0;
+            this.bookLabel.Text = "+ Add Book";
             // 
             // addAuthor
             // 
@@ -291,7 +323,7 @@ namespace BookStore
             // 
             // authorLabel
             // 
-            this.authorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.authorLabel.Location = new System.Drawing.Point(72, 16);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(144, 23);
@@ -309,41 +341,11 @@ namespace BookStore
             this.addAuthorButton.UseVisualStyleBackColor = true;
             this.addAuthorButton.Click += new System.EventHandler(this.addAuthorButton_Click);
             // 
-            // addUser
-            // 
-            this.addUser.BackColor = System.Drawing.Color.Transparent;
-            this.addUser.Controls.Add(this.addUserButton);
-            this.addUser.Controls.Add(this.userLabel);
-            this.addUser.Location = new System.Drawing.Point(8, 48);
-            this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(224, 56);
-            this.addUser.TabIndex = 7;
-            // 
-            // addUserButton
-            // 
-            this.addUserButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addUserButton.BackgroundImage")));
-            this.addUserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addUserButton.Location = new System.Drawing.Point(0, 0);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(64, 56);
-            this.addUserButton.TabIndex = 0;
-            this.addUserButton.UseVisualStyleBackColor = true;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
-            // 
-            // userLabel
-            // 
-            this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(72, 16);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(136, 23);
-            this.userLabel.TabIndex = 1;
-            this.userLabel.Text = "+ Add User";
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 568);
+            this.ClientSize = new System.Drawing.Size(1107, 558);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
@@ -352,13 +354,13 @@ namespace BookStore
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.listPanel.ResumeLayout(false);
+            this.listPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.addBookStore.ResumeLayout(false);
             this.addPublisher.ResumeLayout(false);
+            this.addUser.ResumeLayout(false);
             this.addBook.ResumeLayout(false);
             this.addAuthor.ResumeLayout(false);
-            this.addUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -381,15 +383,16 @@ namespace BookStore
         private System.Windows.Forms.Button addBookButton;
         private System.Windows.Forms.Button addAuthorButton;
         private System.Windows.Forms.Button addUserButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel listPanel;
+       // private System.Windows.Forms.Panel listPanel;
         private System.Windows.Forms.Label showListLabel;
         private System.Windows.Forms.ComboBox searchBox;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button logoutButton;
-
+        private System.Windows.Forms.Button logoutButton1;
+        private System.Windows.Forms.Panel listPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

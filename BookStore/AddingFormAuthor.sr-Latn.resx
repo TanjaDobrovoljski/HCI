@@ -118,60 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dateOfBirthTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 192</value>
-  </data>
-  <data name="clearButton.Text" xml:space="preserve">
-    <value>OBRIŠI</value>
-  </data>
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 336</value>
-  </data>
-  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 31</value>
-  </data>
-  <data name="saveButton.Text" xml:space="preserve">
-    <value>SAČUVAJ</value>
-  </data>
-  <data name="birthPlaceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
-  </data>
-  <data name="birthPlaceLabel.Text" xml:space="preserve">
-    <value>Mjesto rođenja</value>
-  </data>
-  <data name="dateOfBirthLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
-  </data>
-  <data name="dateOfBirthLabel.Text" xml:space="preserve">
-    <value>Datum rođenja</value>
-  </data>
-  <data name="lastNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
-  </data>
-  <data name="lastNameLabel.Text" xml:space="preserve">
-    <value>Prezime</value>
-  </data>
-  <data name="firstNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 17</value>
-  </data>
-  <data name="firstNameLabel.Text" xml:space="preserve">
-    <value>Ime</value>
-  </data>
-  <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 64</value>
-  </data>
-  <data name="lastNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 128</value>
-  </data>
-  <data name="birthPlaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 256</value>
-  </data>
-  <data name="newAuthorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 25</value>
-  </data>
-  <data name="newAuthorLabel.Text" xml:space="preserve">
-    <value>Novi autor</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1303,8 +1249,5 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Dodaj forma - Autor</value>
   </data>
 </root>

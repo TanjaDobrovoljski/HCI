@@ -42,12 +42,12 @@ namespace BookStore
             this.addressLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.newPublisherLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.clearButton);
@@ -60,6 +60,7 @@ namespace BookStore
             this.panel1.Controls.Add(this.emailLabel);
             this.panel1.Controls.Add(this.addressLabel);
             this.panel1.Controls.Add(this.nameLabel);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // clearButton
@@ -121,6 +122,11 @@ namespace BookStore
             resources.ApplyResources(this.newPublisherLabel, "newPublisherLabel");
             this.newPublisherLabel.Name = "newPublisherLabel";
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // AddingFormPublisher
             // 
             resources.ApplyResources(this, "$this");
@@ -128,6 +134,7 @@ namespace BookStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.newPublisherLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddingFormPublisher";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -150,5 +157,6 @@ namespace BookStore
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

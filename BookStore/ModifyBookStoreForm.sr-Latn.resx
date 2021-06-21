@@ -118,54 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>576, 440</value>
-  </data>
-  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 32</value>
-  </data>
-  <data name="saveButton.Text" xml:space="preserve">
-    <value>SAČUVAJ</value>
-  </data>
-  <data name="booksLabel.Text" xml:space="preserve">
-    <value>Knjige</value>
-  </data>
-  <data name="employeesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 17</value>
-  </data>
-  <data name="employeesLabel.Text" xml:space="preserve">
-    <value>Zaposleni</value>
-  </data>
-  <data name="openingLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 17</value>
-  </data>
-  <data name="openingLabel.Text" xml:space="preserve">
-    <value>Datum otvaranja</value>
-  </data>
-  <data name="workTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
-  </data>
-  <data name="workTimeLabel.Text" xml:space="preserve">
-    <value>Radno vrijeme</value>
-  </data>
-  <data name="addressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
-  </data>
-  <data name="addressLabel.Text" xml:space="preserve">
-    <value>Adresa</value>
-  </data>
-  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
-  </data>
-  <data name="nameLabel.Text" xml:space="preserve">
-    <value>Naziv</value>
-  </data>
-  <data name="bookStoreLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 25</value>
-  </data>
-  <data name="bookStoreLabel.Text" xml:space="preserve">
-    <value>Modifikacija knjižare</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1297,8 +1249,5 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Modifikuj forma - Knjižara</value>
   </data>
 </root>

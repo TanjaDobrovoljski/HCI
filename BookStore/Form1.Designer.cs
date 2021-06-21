@@ -73,7 +73,7 @@ namespace BookStore
             resources.ApplyResources(this.englishButton, "englishButton");
             this.englishButton.Name = "englishButton";
             this.englishButton.UseVisualStyleBackColor = true;
-            this.englishButton.Click += new System.EventHandler(this.englishButton_Click);
+            this.englishButton.Click += new System.EventHandler(this.englishButton_Click_1);
             // 
             // Form1
             // 
@@ -95,8 +95,8 @@ namespace BookStore
         private System.Windows.Forms.TextBox usernameText;
         private System.Windows.Forms.Button LogInButton;
         private System.Windows.Forms.Button serbianButton;
-        private System.Windows.Forms.Button englishButton;
         public System.Windows.Forms.TextBox passwordText;
+        private System.Windows.Forms.Button englishButton;
     }
 }
 

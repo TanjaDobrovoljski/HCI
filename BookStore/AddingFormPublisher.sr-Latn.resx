@@ -117,43 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="clearButton.Text" xml:space="preserve">
-    <value>OBRIŠI</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 336</value>
-  </data>
-  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 31</value>
-  </data>
-  <data name="saveButton.Text" xml:space="preserve">
-    <value>SAČUVAJ</value>
-  </data>
-  <data name="phoneNUmberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
-  </data>
-  <data name="phoneNUmberLabel.Text" xml:space="preserve">
-    <value>Broj telefona</value>
-  </data>
-  <data name="addressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
-  </data>
-  <data name="addressLabel.Text" xml:space="preserve">
-    <value>Adresa</value>
-  </data>
-  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
-  </data>
-  <data name="nameLabel.Text" xml:space="preserve">
-    <value>Naziv</value>
-  </data>
-  <data name="newPublisherLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 25</value>
-  </data>
-  <data name="newPublisherLabel.Text" xml:space="preserve">
-    <value>Novi izdavač</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1285,8 +1249,5 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Dodaj forma -Izdavač</value>
   </data>
 </root>

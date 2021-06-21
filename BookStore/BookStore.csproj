@@ -143,12 +143,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,19 +204,40 @@
     <EmbeddedResource Include="AddingFormAuthor.resx">
       <DependentUpon>AddingFormAuthor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormAuthor.sa-IN.resx">
+      <DependentUpon>AddingFormAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormAuthor.sr-Latn.resx">
+      <DependentUpon>AddingFormAuthor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddingFormBook.resx">
+      <DependentUpon>AddingFormBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormBook.sr-Latn.resx">
       <DependentUpon>AddingFormBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddingFormBookStore.resx">
       <DependentUpon>AddingFormBookStore.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormBookStore.sr-Latn.resx">
+      <DependentUpon>AddingFormBookStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddingFormPublisher.resx">
+      <DependentUpon>AddingFormPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormPublisher.sr-Latn.resx">
       <DependentUpon>AddingFormPublisher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddingFormUser.resx">
       <DependentUpon>AddingFormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddingFormUser.sr-Latn.resx">
+      <DependentUpon>AddingFormUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookStoreSave4.resx">
+      <DependentUpon>BookStoreSave4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookStoreSave4.sr-Latn.resx">
       <DependentUpon>BookStoreSave4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.en.resx">
@@ -243,28 +258,40 @@
     <EmbeddedResource Include="Form2.sr-Latn.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.en.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.sr-Latn.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyAuthorForm.resx">
       <DependentUpon>ModifyAuthorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyAuthorForm.sr-Latn.resx">
+      <DependentUpon>ModifyAuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifyBookForm.resx">
+      <DependentUpon>ModifyBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyBookForm.sr-Latn.resx">
       <DependentUpon>ModifyBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyBookStoreForm.resx">
       <DependentUpon>ModifyBookStoreForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyBookStoreForm.sr-Latn.resx">
+      <DependentUpon>ModifyBookStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifyPublisherForm.resx">
       <DependentUpon>ModifyPublisherForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPublisherForm.sr-Latn.resx">
+      <DependentUpon>ModifyPublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifyUserForm.resx">
+      <DependentUpon>ModifyUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyUserForm.sr-Latn.resx">
       <DependentUpon>ModifyUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
