@@ -165,9 +165,9 @@ namespace BookStore
                             this.Hide();
                             AdminForm f3 = new AdminForm(1, userName);
                             f3.ShowDialog();
-                            this.Close();
+                           /* this.Close();
                             this.usernameText.Text = "";
-                            this.passwordText.Text = "";
+                            this.passwordText.Text = "";*/
                             // ActiveControl = this.usernameText;
 
                             //this.Show();
@@ -182,10 +182,10 @@ namespace BookStore
                             Form2 f2 = new Form2(i);
 
                             f2.ShowDialog();
-                            this.passwordText.Text = "";
+                            /*this.passwordText.Text = "";
                             this.usernameText.Text = "";
                             ActiveControl = this.usernameText;
-                            this.Show();
+                            this.Show();*/
 
                         }
 
@@ -224,10 +224,10 @@ namespace BookStore
                     Form2 f = new Form2(i);
 
                     f.ShowDialog();
-                    this.passwordText.Text = "";
+                    /*this.passwordText.Text = "";
                     this.usernameText.Text = "";
                     ActiveControl = this.usernameText;
-                    this.Show();
+                    this.Show();*/
                 }
             }
             

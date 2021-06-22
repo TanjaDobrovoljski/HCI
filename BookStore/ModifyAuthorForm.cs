@@ -85,19 +85,7 @@ namespace BookStore
                     MessageBox.Show("Please make sure all required fields are filled out correctly.");
                 }
             }
-            else if (booksTextBox.Text == "")
-            {
-                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
-                {
-                    ActiveControl = this.booksTextBox;
-                    MessageBox.Show("Molimo vas da popunite sva polja.");
-                }
-                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
-                {
-                    ActiveControl = this.booksTextBox;
-                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
-                }
-            }
+            
 
             else
             {

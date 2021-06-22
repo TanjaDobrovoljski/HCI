@@ -126,15 +126,15 @@ namespace BookStore
             }
 
             if (i == 0)
-                showUser();
+            { showUser(); searchBox.SelectedIndex = 0; }
             else if (i == 1)
-                showAuthor();
+                { showAuthor(); searchBox.SelectedIndex = 1; }
             else if (i == 2)
-                showBooks();
+                    { showBooks(); searchBox.SelectedIndex = 2; }
             else if (i == 3)
-                showPublisher();
+                        { showPublisher(); searchBox.SelectedIndex = 3; }
             else if (i == 4)
-                showBookStore();
+            { showBookStore(); searchBox.SelectedIndex = 4; }
 
         }
 
@@ -517,7 +517,7 @@ namespace BookStore
             else if (searchBox.SelectedIndex == 3)
                 showPublisher();
             else if (searchBox.SelectedIndex == 4)
-                showBookStore();
+            { showBookStore();  }
         }
 
         private void addUserButton_Click(object sender, EventArgs e)
@@ -728,7 +728,7 @@ namespace BookStore
                     }
 
                 }
-                i = 0;
+                i=0;
 
             }
 
@@ -899,7 +899,7 @@ namespace BookStore
                         Form4_Load(sender, e);
                     }
                 }
-                i = 0;
+                //i = 0;
             }
         }
 
@@ -916,7 +916,7 @@ namespace BookStore
                 if (MessageBox.Show("Želite li se odjaviti?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     
-                    this.Hide();
+                    
 
                     Application.Exit();
                 }
@@ -925,7 +925,7 @@ namespace BookStore
             {
                 if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    this.Hide();
+                    
 
                     Application.Exit();
                 }

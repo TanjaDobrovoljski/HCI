@@ -42,9 +42,9 @@ namespace BookStore
                 searchPublisherBox.Items.Clear();
                 searchAuthorBox.Items.Clear();
 
-                searchTitleBox.Items.Add("None()");
-                searchPublisherBox.Items.Add("None()");
-                searchAuthorBox.Items.Add("None()");
+                searchTitleBox.Items.Add("Nijedna");
+                searchPublisherBox.Items.Add("Nijedna");
+                searchAuthorBox.Items.Add("Nijedna");
             }
             else if (Thread.CurrentThread.CurrentCulture.Name == "en")
              {
@@ -469,8 +469,7 @@ namespace BookStore
             {
                 if (MessageBox.Show("Želite li se izlogovati?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Form1 f = new Form1();
-                    f.ShowDialog();
+                    Application.Exit();
                 }
             }
             else if (Thread.CurrentThread.CurrentCulture.Name == "en")
@@ -478,8 +477,7 @@ namespace BookStore
 
                 if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Form1 f = new Form1();
-                    f.ShowDialog();
+                    Application.Exit();
                 }
             }
         }
