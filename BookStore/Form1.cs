@@ -131,15 +131,26 @@ namespace BookStore
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            //hesiraj lozinke!!!
+
+
+
+
+
             if (string.IsNullOrWhiteSpace(usernameText.Text) || passwordText.Text == "")
-                MessageBox.Show("You should enter password and username!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            {
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    MessageBox.Show("Trebate popuniti korisničko ime ili lozinku!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                    MessageBox.Show("You should enter password and username!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
             else
             {
                 string userName = usernameText.Text;
                 string hashPassw = passwordText.Text;
 
-                
+
 
                 if (UserDAO.Check_Username(userName) == true)
                 {
@@ -157,19 +168,19 @@ namespace BookStore
                             this.Close();
                             this.usernameText.Text = "";
                             this.passwordText.Text = "";
-                           // ActiveControl = this.usernameText;
-                            
+                            // ActiveControl = this.usernameText;
+
                             //this.Show();
 
 
                         }
                         else if (admin == 2)
                         {
-                            
+
                             int i = BookStoreHasUserDAO.getBookStoreID(UserDAO.getByID(UserDAO.getID(userName)));
                             this.Hide();
                             Form2 f2 = new Form2(i);
-                            
+
                             f2.ShowDialog();
                             this.passwordText.Text = "";
                             this.usernameText.Text = "";
@@ -181,13 +192,16 @@ namespace BookStore
                     }
                     else
                     {
-                        MessageBox.Show("Incorrect password");
+                        if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                        { MessageBox.Show("Neispravna lozinka"); }
+                        else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                            MessageBox.Show("Incorrect password");
                         this.passwordText.Text = "";
                         this.usernameText.Text = "";
                         ActiveControl = this.usernameText;
                         this.Show();
                     }
-                        
+
 
 
                 }
@@ -195,7 +209,10 @@ namespace BookStore
 
                 else
                 {
-                    MessageBox.Show("You are not registered.\r\n Now, you will have your account");
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    { MessageBox.Show("Niste registrovani.\r\n Upravo sada imate profil i možete pristupiti"); }
+                    else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                        MessageBox.Show("You are not registered.\r\n Now, you will have your account");
                     User korisnik = new User(userName, hashPassw, 2);
                     UserDAO.Insert(korisnik);
 
@@ -213,6 +230,7 @@ namespace BookStore
                     this.Show();
                 }
             }
+            
         }
 
         private void usernameText_TextChanged(object sender, EventArgs e)

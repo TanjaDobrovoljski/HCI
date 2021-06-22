@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -38,20 +39,42 @@ namespace BookStore
         {
             if (usernameModifyTextBox.Text == "")
             {
-                ActiveControl = this.usernameModifyTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.usernameModifyTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.usernameModifyTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (passwordModifyTextBox.Text == "")
             {
-                ActiveControl = this.passwordModifyTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.passwordModifyTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.passwordModifyTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (employeeTextBox.Text == "")
             {
-                ActiveControl = this.employeeTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.employeeTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.employeeTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
 
             else
@@ -60,7 +83,10 @@ namespace BookStore
                 User u = new User(username, password, 2);
                 User u2 = new User(usernameModifyTextBox.Text, passwordModifyTextBox.Text, 2);
                 UserDAO.Update(u, u2);
-                MessageBox.Show("User successfuly updated!");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                { MessageBox.Show("Korisnik je uspiješno modifikovan!"); }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                    MessageBox.Show("User successfuly updated!");
 
                 this.Close();
                 

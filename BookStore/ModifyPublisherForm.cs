@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,27 +30,56 @@ namespace BookStore
         {
             if (nameTextBox.Text == "")
             {
-                ActiveControl = this.nameTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.nameTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.nameTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (addressTextBox.Text == "")
             {
-                ActiveControl = this.addressTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.addressTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.addressTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (emailTextBox.Text == "")
             {
-                ActiveControl = this.emailTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.emailTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.emailTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
 
             else if (phoneTextBox.Text == "")
             {
-                ActiveControl = this.phoneTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.phoneTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.phoneTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
 
             
@@ -60,7 +90,10 @@ namespace BookStore
                 Publisher p = new Publisher(name);
                 Publisher p2 = new Publisher(nameTextBox.Text, addressTextBox.Text, emailTextBox.Text, phoneTextBox.Text);
                 PublisherDAO.Update(p, p2);
-                MessageBox.Show("Publisher successfuly updated!");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                { MessageBox.Show("Izdavač je uspiješno modifikovan!"); }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                    MessageBox.Show("Publisher successfuly updated!");
 
                 this.Close();
 

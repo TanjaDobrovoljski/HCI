@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,32 +35,68 @@ namespace BookStore
         {
             if (firstNameTextBox.Text == "")
             {
-                ActiveControl = this.firstNameTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.firstNameTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.firstNameTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (lastNameTextBox.Text == "")
             {
-                ActiveControl = this.lastNameTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.lastNameTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.lastNameTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (birthPlaceTextBox.Text == "")
             {
-                ActiveControl = this.birthPlaceTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.birthPlaceTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.birthPlaceTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (dateBirthTextBox.Text == "")
             {
-                ActiveControl = this.dateBirthTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.dateBirthTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.dateBirthTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (booksTextBox.Text == "")
             {
-                ActiveControl = this.booksTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.booksTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.booksTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
 
             else
@@ -67,7 +104,10 @@ namespace BookStore
                 Author a = new Author(firstName, lastName);
                 Author a2 = new Author(firstNameTextBox.Text, lastNameTextBox.Text, dateBirthTextBox.Text, birthPlaceTextBox.Text);
                 AuthorDAO.Update(a, a2);
-                MessageBox.Show("Author successfuly updated!");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                { MessageBox.Show("Autor je uspiješno modifikovan!"); }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                    MessageBox.Show("Author successfuly updated!");
 
                 this.Close();
             }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -53,26 +54,57 @@ namespace BookStore
         {
             if (titleTextBox.Text == "")
             {
-                ActiveControl = this.titleTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.titleTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.titleTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (publishingYearTextBox.Text == "")
             {
-                ActiveControl = this.publishingYearTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.publishingYearTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.publishingYearTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
 
             }
             else if (publisherComboBox.SelectedIndex == -1)
             {
-                ActiveControl = this.publisherComboBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.publisherComboBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.publisherComboBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
 
             }
             else if (authorComboBox.SelectedIndex == -1)
             {
-                ActiveControl = this.authorComboBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.authorComboBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.authorComboBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else
             {
@@ -110,12 +142,17 @@ namespace BookStore
                 try
                 {
                     BookDAO.Add_book(title, Int32.Parse(publishing_year), PublisherDAO.getByID(PublisherDAO.getID(publisher)), description, image, AuthorDAO.getByID(AuthorDAO.getID(result[0], result[1])));
-
-                    MessageBox.Show("Book is now added!");
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    { MessageBox.Show("Knjiga je dodata!"); }
+                    else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                        MessageBox.Show("Book is now added!");
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error happened!");
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    { MessageBox.Show("Desila se greška!"); }
+                    else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                        MessageBox.Show("Error happened!");
                     return;
                 }
 
@@ -136,13 +173,23 @@ namespace BookStore
                 imageTextBox.Text = "";
                 descriptionTextBox.Text = "";
 
-                
-
-                DialogResult dialogResult = MessageBox.Show(" Do you want to add this book in Book Store?", "", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    BookStoreSave4 f = new BookStoreSave4();
-                    f.ShowDialog();
+                    DialogResult dialogResult = MessageBox.Show(" Do you want to add this book in Book StoreDa li želite dodati knjigu u određenu knjižaru?", "", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        BookStoreSave4 f = new BookStoreSave4();
+                        f.ShowDialog();
+                    }
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    DialogResult dialogResult = MessageBox.Show(" Do you want to add this book in Book Store?", "", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        BookStoreSave4 f = new BookStoreSave4();
+                        f.ShowDialog();
+                    }
                 }
 
                 this.Close();
@@ -172,10 +219,22 @@ namespace BookStore
 
         private void descriptionTextBox_Enter(object sender, EventArgs e)
         {
-            if (descriptionTextBox.Text == "You can write description here.(It's not required!)")
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                descriptionTextBox.Text = "";
-                descriptionTextBox.ForeColor = Color.Black;
+                if (descriptionTextBox.Text == "Možete dodati opis.(Nije neophodno!)")
+                {
+                    descriptionTextBox.Text = "";
+                    descriptionTextBox.ForeColor = Color.Black;
+                }
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            {
+
+                if (descriptionTextBox.Text == "You can write description here.(It's not required!)")
+                {
+                    descriptionTextBox.Text = "";
+                    descriptionTextBox.ForeColor = Color.Black;
+                }
             }
         }
 
@@ -183,9 +242,19 @@ namespace BookStore
         {
             if (descriptionTextBox.Text == "")
             {
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    descriptionTextBox.Text = "Možete dodati opis.(Nije neophodno!)";
+
+                    descriptionTextBox.ForeColor = Color.Silver;
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                { 
+
                 descriptionTextBox.Text = "You can write description here.(It's not required!)";
 
                 descriptionTextBox.ForeColor = Color.Silver;
+                 }
             }
         }
 
@@ -201,17 +270,34 @@ namespace BookStore
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-
-            DialogResult dialogResult = MessageBox.Show(" Do you want to clear everything?", "", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                titleTextBox.Text = "";
-                publishingYearTextBox.Text = "";
-                publisherComboBox.SelectedIndex = -1;
-                authorComboBox.SelectedIndex = -1;
+                DialogResult dialogResult = MessageBox.Show(" Želite li sve obrisati?", "", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    titleTextBox.Text = "";
+                    publishingYearTextBox.Text = "";
+                    publisherComboBox.SelectedIndex = -1;
+                    authorComboBox.SelectedIndex = -1;
 
-                imageTextBox.Text = "";
-                descriptionTextBox.Text = "";
+                    imageTextBox.Text = "";
+                    descriptionTextBox.Text = "";
+                }
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            {
+
+                DialogResult dialogResult = MessageBox.Show(" Do you want to clear everything?", "", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    titleTextBox.Text = "";
+                    publishingYearTextBox.Text = "";
+                    publisherComboBox.SelectedIndex = -1;
+                    authorComboBox.SelectedIndex = -1;
+
+                    imageTextBox.Text = "";
+                    descriptionTextBox.Text = "";
+                }
             }
             
            

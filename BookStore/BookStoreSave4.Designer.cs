@@ -46,6 +46,7 @@ namespace BookStore
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.clearButton);
@@ -56,7 +57,6 @@ namespace BookStore
             this.panel1.Controls.Add(this.quantityLabel);
             this.panel1.Controls.Add(this.bookStoreComboBox);
             this.panel1.Controls.Add(this.bookStoreLabel);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // clearButton

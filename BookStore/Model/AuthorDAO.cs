@@ -180,12 +180,20 @@ namespace BookStore.Model
                 MySqlCommand cmd = new MySqlCommand(query, conn.connection);
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-
+                Author u;
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    Author u = new Author(dataReader["first_name"].ToString(), dataReader["last_name"].ToString(), dataReader["date_of_birth"].ToString().Replace("12:00:00 AM",""),dataReader["birth_place"].ToString());
-                    list.Add(u);
+                    if (dataReader["date_of_birth"].ToString().Contains("12:00:00 AM") == true)
+                    {
+                        u = new Author(dataReader["first_name"].ToString(), dataReader["last_name"].ToString(), dataReader["date_of_birth"].ToString().Replace(". 12:00:00 AM", ""), dataReader["birth_place"].ToString());
+                        list.Add(u);
+                    }
+                    else if (dataReader["date_of_birth"].ToString().Contains("00:00:00") == true)
+                            {
+                        u = new Author(dataReader["first_name"].ToString(), dataReader["last_name"].ToString(), dataReader["date_of_birth"].ToString().Replace(". 00:00:00", ""), dataReader["birth_place"].ToString());
+                        list.Add(u);
+                    }
 
                 }
 

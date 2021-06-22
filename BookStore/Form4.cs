@@ -28,15 +28,27 @@ namespace BookStore
            
             
             toolStripContainer1.Dock = DockStyle.Fill;
-            listPanel1.Anchor = AnchorStyles.Right;
-            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            listPanel2.Anchor = AnchorStyles.Right;
+           // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
 
-            if (Thread.CurrentThread.CurrentCulture.Name!= "sr-Latn")
+            if (Thread.CurrentThread.CurrentCulture.Name== "sr-Latn")
             {
-                logoutButton1.Text = "ODJAVA";
+                logoutButton2.Text = "ODJAVA";
                 showListLabel.Text = "Prikazi listu:";
                 modifyButton.Text = "Modifikacija";
-                deleteButton.Text = "Obriši";
+                deleteButton2.Text = "Obriši";
+                userLabel.Text = "+ Dodaj korinsika";
+                authorLabel.Text = "+ Dodaj autora";
+                bookLabel.Text = "+ Dodaj knjigu";
+                bookstoreLabel.Text = "+ Dodaj knjižaru";
+                publisherLabel.Text = "+ Dodaj izdavača";
+                this.Text = "Katalog knjiga - Admin";
+                searchBox.Items.Clear();
+                searchBox.Items.Add("Korisnici");
+                searchBox.Items.Add("Autori");
+                searchBox.Items.Add("Knjige");
+                searchBox.Items.Add("Izdavači");
+                searchBox.Items.Add("Knjižare");
 
             }
 
@@ -52,18 +64,30 @@ namespace BookStore
             this.tipKorisnika = tipKorisnika;
             this.userName = userName;
             modifyButton.Enabled = false;
-            deleteButton.Enabled = false;
+            deleteButton2.Enabled = false;
             
             
             toolStripContainer1.Dock = DockStyle.Fill;
-            listPanel1.Anchor = AnchorStyles.Right;
-            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
-            if (Thread.CurrentThread.CurrentCulture.Name != "sr-Latn")
+            listPanel2.Anchor = AnchorStyles.Right;
+           // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                logoutButton1.Text = "ODJAVA";
+                logoutButton2.Text = "ODJAVA";
                 showListLabel.Text = "Prikazi listu:";
                 modifyButton.Text = "Modifikacija";
-                deleteButton.Text = "Obriši";
+                deleteButton2.Text = "Obriši";
+                userLabel.Text = "+ Dodaj korinsika";
+                authorLabel.Text = "+ Dodaj autora";
+                bookLabel.Text = "+ Dodaj knjigu";
+                bookstoreLabel.Text = "+ Dodaj knjižaru";
+                publisherLabel.Text = "+ Dodaj izdavača";
+                this.Text = "Katalog knjiga - Admin";
+                searchBox.Items.Clear();
+                searchBox.Items.Add("Korisnici");
+                searchBox.Items.Add("Autori");
+                searchBox.Items.Add("Knjige");
+                searchBox.Items.Add("Izdavači");
+                searchBox.Items.Add("Knjižare");
 
             }
 
@@ -78,14 +102,26 @@ namespace BookStore
         private void Form4_Load(object sender, EventArgs e)
         {
             toolStripContainer1.Dock = DockStyle.Fill;
-            listPanel1.Anchor = AnchorStyles.Right;
-            logoutButton1.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
-            if (Thread.CurrentThread.CurrentCulture.Name != "sr-Latn")
+            listPanel2.Anchor = AnchorStyles.Right;
+            //logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                logoutButton1.Text = "ODJAVA";
+                logoutButton2.Text = "ODJAVA";
                 showListLabel.Text = "Prikazi listu:";
                 modifyButton.Text = "Modifikacija";
-                deleteButton.Text = "Obriši";
+                deleteButton2.Text = "Obriši";
+                userLabel.Text = "+ Dodaj korinsika";
+                authorLabel.Text = "+ Dodaj autora";
+                bookLabel.Text = "+ Dodaj knjigu";
+                bookstoreLabel.Text = "+ Dodaj knjižaru";
+                publisherLabel.Text = "+ Dodaj izdavača";
+                this.Text = "Katalog knjiga - Admin";
+                searchBox.Items.Clear();
+                searchBox.Items.Add("Korisnici");
+                searchBox.Items.Add("Autori");
+                searchBox.Items.Add("Knjige");
+                searchBox.Items.Add("Izdavači");
+                searchBox.Items.Add("Knjižare");
 
             }
 
@@ -115,10 +151,20 @@ namespace BookStore
                 DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 4;
-            dataGridView.Columns[0].Name = "No.";
-            dataGridView.Columns[1].Name = "Username";
-            dataGridView.Columns[2].Name = "Password";
-            dataGridView.Columns[3].Name = "Employee in Book Store";
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                dataGridView.Columns[0].Name = "Redni broj";
+                dataGridView.Columns[1].Name = "Korisničko ime";
+                dataGridView.Columns[2].Name = "Lozinka";
+                dataGridView.Columns[3].Name = "Zaposlen u knjižari";
+            }
+            else
+            {
+                dataGridView.Columns[0].Name = "No.";
+                dataGridView.Columns[1].Name = "Username";
+                dataGridView.Columns[2].Name = "Password";
+                dataGridView.Columns[3].Name = "Employee in Book Store";
+            }
 
 
             string[] row = new string[3];
@@ -170,13 +216,25 @@ namespace BookStore
                 DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 6;
-            dataGridView.Columns[0].Name = "No.";
-            dataGridView.Columns[1].Name = "First name";
-            dataGridView.Columns[2].Name = "Last name";
-            dataGridView.Columns[3].Name = "Date of birth";
-            dataGridView.Columns[4].Name = "Birth place";
-            dataGridView.Columns[5].Name = "Books";
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                dataGridView.Columns[0].Name = "Redni broj";
+                dataGridView.Columns[1].Name = "Ime";
+                dataGridView.Columns[2].Name = "Prezime";
+                dataGridView.Columns[3].Name = "Datum rođenja";
+                dataGridView.Columns[4].Name = "Mjesto rođenja";
+                dataGridView.Columns[5].Name = "Knjige";
 
+            }
+            else
+            {
+                dataGridView.Columns[0].Name = "No.";
+                dataGridView.Columns[1].Name = "First name";
+                dataGridView.Columns[2].Name = "Last name";
+                dataGridView.Columns[3].Name = "Date of birth";
+                dataGridView.Columns[4].Name = "Birth place";
+                dataGridView.Columns[5].Name = "Books";
+            }
 
 
             string[] row = new string[5];
@@ -236,13 +294,26 @@ namespace BookStore
                 DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 5;
-            dataGridView.Columns[0].Name = "No.";
-            dataGridView.Columns[1].Name = "Title";
-            dataGridView.Columns[2].Name = "Publishing year";
-            dataGridView.Columns[3].Name = "Publisher";
-            dataGridView.Columns[4].Name = "Author";
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                dataGridView.Columns[0].Name = "Redni broj";
+                dataGridView.Columns[1].Name = "Naslov";
+                dataGridView.Columns[2].Name = "Godina izdavanja";
+                dataGridView.Columns[3].Name = "Izdavač";
+                dataGridView.Columns[4].Name = "Autor";
+
+            }
+            else
+            {
 
 
+                dataGridView.Columns[0].Name = "No.";
+                dataGridView.Columns[1].Name = "Title";
+                dataGridView.Columns[2].Name = "Publishing year";
+                dataGridView.Columns[3].Name = "Publisher";
+                dataGridView.Columns[4].Name = "Author";
+
+            }
 
 
             string[] row = new string[4];
@@ -288,13 +359,26 @@ namespace BookStore
                 DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 6;
-            dataGridView.Columns[0].Name = "No.";
-            dataGridView.Columns[1].Name = "Name";
-            dataGridView.Columns[2].Name = "Address";
-            dataGridView.Columns[3].Name = "Email";
-            dataGridView.Columns[4].Name = "Phone number";
-            dataGridView.Columns[5].Name = "Books";
 
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                dataGridView.Columns[0].Name = "Redni broj";
+                dataGridView.Columns[1].Name = "Ime";
+                dataGridView.Columns[2].Name = "Adresa";
+                dataGridView.Columns[3].Name = "Email";
+                dataGridView.Columns[4].Name = "Broj telefona";
+                dataGridView.Columns[5].Name = "Knjige";
+            }
+
+            else
+            {
+                dataGridView.Columns[0].Name = "No.";
+                dataGridView.Columns[1].Name = "Name";
+                dataGridView.Columns[2].Name = "Address";
+                dataGridView.Columns[3].Name = "Email";
+                dataGridView.Columns[4].Name = "Phone number";
+                dataGridView.Columns[5].Name = "Books";
+            }
 
 
 
@@ -341,13 +425,26 @@ namespace BookStore
                 DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 7;
-            dataGridView.Columns[0].Name = "No.";
-            dataGridView.Columns[1].Name = "Name";
-            dataGridView.Columns[2].Name = "Address";
-            dataGridView.Columns[3].Name = "Work time";
-            dataGridView.Columns[4].Name = "Openning date";
-            dataGridView.Columns[5].Name = "Employees";
-            dataGridView.Columns[6].Name = "Books";
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                dataGridView.Columns[0].Name = "Redni broj";
+                dataGridView.Columns[1].Name = "Ime";
+                dataGridView.Columns[2].Name = "Adresa";
+                dataGridView.Columns[3].Name = "Radno vrijeme";
+                dataGridView.Columns[4].Name = "Datum otvaranja";
+                dataGridView.Columns[5].Name = "Zaposlenici";
+                dataGridView.Columns[6].Name = "Knjige";
+            }
+            else
+            {
+                dataGridView.Columns[0].Name = "No.";
+                dataGridView.Columns[1].Name = "Name";
+                dataGridView.Columns[2].Name = "Address";
+                dataGridView.Columns[3].Name = "Work time";
+                dataGridView.Columns[4].Name = "Openning date";
+                dataGridView.Columns[5].Name = "Employees";
+                dataGridView.Columns[6].Name = "Books";
+            }
 
 
             List<BookStore1> list = BookStoreDAO.Select();
@@ -495,7 +592,7 @@ namespace BookStore
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             modifyButton.Enabled = true;
-            deleteButton.Enabled = true;
+            deleteButton2.Enabled = true;
 
 
             int i = 0;
@@ -509,11 +606,18 @@ namespace BookStore
 
                 for (int column = 1; column < dataGridView.Columns.Count - 1; column++)
                 {
-
-                    username = dataGridView.Rows[i].Cells["Username"].Value.ToString();
-                    password = dataGridView.Rows[i].Cells["Password"].Value.ToString();
-                    emlpoyee_in = dataGridView.Rows[i].Cells["Employee in Book Store"].Value.ToString();
-
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    {
+                        username = dataGridView.Rows[i].Cells["Korisničko ime"].Value.ToString();
+                        password = dataGridView.Rows[i].Cells["Lozinka"].Value.ToString();
+                        emlpoyee_in = dataGridView.Rows[i].Cells["Zaposlen u knjižari"].Value.ToString();
+                    }
+                    else
+                    {
+                        username = dataGridView.Rows[i].Cells["Username"].Value.ToString();
+                        password = dataGridView.Rows[i].Cells["Password"].Value.ToString();
+                        emlpoyee_in = dataGridView.Rows[i].Cells["Employee in Book Store"].Value.ToString();
+                    }
                 }
                 i = 0;
 
@@ -524,12 +628,23 @@ namespace BookStore
             {
                 for (int column = 1; column < dataGridView.Columns.Count - 1; column++)
                 {
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    {
+                        firstName = dataGridView.Rows[i].Cells["Ime"].Value.ToString();
+                        lastName = dataGridView.Rows[i].Cells["Prezime"].Value.ToString();
+                        date_of_birth = dataGridView.Rows[i].Cells["Datum rođenja"].Value.ToString();
+                        birthPlace = dataGridView.Rows[i].Cells["Mjesto rođenja"].Value.ToString();
+                        books = dataGridView.Rows[i].Cells["Knjige"].Value.ToString();
+                    }
+                    else
+                    {
 
-                    firstName = dataGridView.Rows[i].Cells["First name"].Value.ToString();
-                    lastName = dataGridView.Rows[i].Cells["Last name"].Value.ToString();
-                    date_of_birth = dataGridView.Rows[i].Cells["Date of birth"].Value.ToString();
-                    birthPlace = dataGridView.Rows[i].Cells["Birth place"].Value.ToString();
-                    books = dataGridView.Rows[i].Cells["Books"].Value.ToString();
+                        firstName = dataGridView.Rows[i].Cells["First name"].Value.ToString();
+                        lastName = dataGridView.Rows[i].Cells["Last name"].Value.ToString();
+                        date_of_birth = dataGridView.Rows[i].Cells["Date of birth"].Value.ToString();
+                        birthPlace = dataGridView.Rows[i].Cells["Birth place"].Value.ToString();
+                        books = dataGridView.Rows[i].Cells["Books"].Value.ToString();
+                    }
 
                 }
                 i = 0;
@@ -539,15 +654,24 @@ namespace BookStore
             {
                 for (int column = 1; column < dataGridView.Columns.Count - 1; column++)
                 {
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    {
+                        title = dataGridView.Rows[i].Cells["Naslov"].Value.ToString();
+                        publishing_year = dataGridView.Rows[i].Cells["Godina izdavanja"].Value.ToString();
+                        publisher = dataGridView.Rows[i].Cells["Izdavač"].Value.ToString();
+                        author = dataGridView.Rows[i].Cells["Autor"].Value.ToString();
+                    }
+                    else
+                    {
+                        title = dataGridView.Rows[i].Cells["Title"].Value.ToString();
+                        publishing_year = dataGridView.Rows[i].Cells["Publishing year"].Value.ToString();
+                        publisher = dataGridView.Rows[i].Cells["Publisher"].Value.ToString();
+                        author = dataGridView.Rows[i].Cells["Author"].Value.ToString();
+                    }
 
-                    title = dataGridView.Rows[i].Cells["Title"].Value.ToString();
-                    publishing_year = dataGridView.Rows[i].Cells["Publishing year"].Value.ToString();
-                    publisher = dataGridView.Rows[i].Cells["Publisher"].Value.ToString();
-                    author = dataGridView.Rows[i].Cells["Author"].Value.ToString();
-
-                    description = BookDAO.getByID(BookDAO.getID(title)).getDescription();
-                    image = BookDAO.getByID(BookDAO.getID(title)).getImage();
-
+                        description = BookDAO.getByID(BookDAO.getID(title)).getDescription();
+                        image = BookDAO.getByID(BookDAO.getID(title)).getImage();
+                    
 
 
                 }
@@ -558,13 +682,23 @@ namespace BookStore
             {
                 for (int column = 1; column < dataGridView.Columns.Count - 1; column++)
                 {
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    {
+                        name = dataGridView.Rows[i].Cells["Ime"].Value.ToString();
+                        address = dataGridView.Rows[i].Cells["Adresa"].Value.ToString();
+                        email = dataGridView.Rows[i].Cells["Email"].Value.ToString();
+                        phone_number = dataGridView.Rows[i].Cells["Broj telefona"].Value.ToString();
+                        books_p = dataGridView.Rows[i].Cells["Knjige"].Value.ToString();
 
-                    name = dataGridView.Rows[i].Cells["Name"].Value.ToString();
-                    address = dataGridView.Rows[i].Cells["Address"].Value.ToString();
-                    email = dataGridView.Rows[i].Cells["Email"].Value.ToString();
-                    phone_number = dataGridView.Rows[i].Cells["Phone number"].Value.ToString();
-                    books_p = dataGridView.Rows[i].Cells["Books"].Value.ToString();
-
+                    }
+                    else
+                    {
+                        name = dataGridView.Rows[i].Cells["Name"].Value.ToString();
+                        address = dataGridView.Rows[i].Cells["Address"].Value.ToString();
+                        email = dataGridView.Rows[i].Cells["Email"].Value.ToString();
+                        phone_number = dataGridView.Rows[i].Cells["Phone number"].Value.ToString();
+                        books_p = dataGridView.Rows[i].Cells["Books"].Value.ToString();
+                    }
 
                 }
                 i = 0;
@@ -574,14 +708,24 @@ namespace BookStore
             {
                 for (int column = 1; column < dataGridView.Columns.Count - 1; column++)
                 {
-
-                    name_bs = dataGridView.Rows[i].Cells["Name"].Value.ToString();
-                    address_bs = dataGridView.Rows[i].Cells["Address"].Value.ToString();
-                    work_time = dataGridView.Rows[i].Cells["Work time"].Value.ToString();
-                    opening_date = dataGridView.Rows[i].Cells["Openning date"].Value.ToString();
-                    employees = dataGridView.Rows[i].Cells["Employees"].Value.ToString();
-                    books_bs = dataGridView.Rows[i].Cells["Books"].Value.ToString();
-
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    {
+                        name_bs = dataGridView.Rows[i].Cells["Ime"].Value.ToString();
+                        address_bs = dataGridView.Rows[i].Cells["Adresa"].Value.ToString();
+                        work_time = dataGridView.Rows[i].Cells["Radno vrijeme"].Value.ToString();
+                        opening_date = dataGridView.Rows[i].Cells["Datum otvaranja"].Value.ToString();
+                        employees = dataGridView.Rows[i].Cells["Zaposlenici"].Value.ToString();
+                        books_bs = dataGridView.Rows[i].Cells["Knjige"].Value.ToString();
+                    }
+                    else
+                    {
+                        name_bs = dataGridView.Rows[i].Cells["Name"].Value.ToString();
+                        address_bs = dataGridView.Rows[i].Cells["Address"].Value.ToString();
+                        work_time = dataGridView.Rows[i].Cells["Work time"].Value.ToString();
+                        opening_date = dataGridView.Rows[i].Cells["Openning date"].Value.ToString();
+                        employees = dataGridView.Rows[i].Cells["Employees"].Value.ToString();
+                        books_bs = dataGridView.Rows[i].Cells["Books"].Value.ToString();
+                    }
 
                 }
                 i = 0;
@@ -635,58 +779,125 @@ namespace BookStore
         {
             if (searchBox.SelectedIndex <= 0)
             {
-                if (MessageBox.Show("Do you want to delete this user?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    UserDAO.Delete(UserDAO.getByID(UserDAO.getID(username)));
-                    MessageBox.Show("User is now deleted!");
-                    i = 0;
-                    Form4_Load(sender, e);
+                    if (MessageBox.Show("Želite li izbrisati ovog korisnika?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        UserDAO.Delete(UserDAO.getByID(UserDAO.getID(username)));
+                        MessageBox.Show("Korisnik je uspiješno izbrisan!");
+                        i = 0;
+                        Form4_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to delete this user?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        UserDAO.Delete(UserDAO.getByID(UserDAO.getID(username)));
+                        MessageBox.Show("User is now deleted!");
+                        i = 0;
+                        Form4_Load(sender, e);
+                    }
                 }
                 i = 0;
             }
             else if (searchBox.SelectedIndex == 1)
             {
-                if (MessageBox.Show("Do you want to delete this author?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    AuthorDAO.Delete(AuthorDAO.getByID(AuthorDAO.getID(firstName, lastName)));
-                    MessageBox.Show("Author is now deleted!");
-                    i = 1;
-                    Form4_Load(sender, e);
+                    if (MessageBox.Show("Želite li izbrisati ovog autora?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        AuthorDAO.Delete(AuthorDAO.getByID(AuthorDAO.getID(firstName, lastName)));
+                        MessageBox.Show("Autor je uspiješno izbrisan!");
+                        i = 1;
+                        Form4_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to delete this author?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        AuthorDAO.Delete(AuthorDAO.getByID(AuthorDAO.getID(firstName, lastName)));
+                        MessageBox.Show("Author is now deleted!");
+                        i = 1;
+                        Form4_Load(sender, e);
+                    }
                 }
                 i = 0;
             }
             else if (searchBox.SelectedIndex == 2)
             {
-                if (MessageBox.Show("Do you want to delete this book?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    BookDAO.Delete(BookDAO.getByID(BookDAO.getID(title)));
+                    if (MessageBox.Show("Želite li izbrisati ovu knjigu?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        BookDAO.Delete(BookDAO.getByID(BookDAO.getID(title)));
 
-                    MessageBox.Show("Book is now deleted!");
-                    i = 2;
-                    Form4_Load(sender, e);
+                        MessageBox.Show("Knjiga je uspiješno izbrisana!");
+                        i = 2;
+                        Form4_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to delete this book?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        BookDAO.Delete(BookDAO.getByID(BookDAO.getID(title)));
+
+                        MessageBox.Show("Book is now deleted!");
+                        i = 2;
+                        Form4_Load(sender, e);
+                    }
                 }
                 i = 0;
             }
             else if (searchBox.SelectedIndex == 3)
             {
-                if (MessageBox.Show("Do you want to delete this publisher?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    PublisherDAO.Delete(PublisherDAO.getByID(PublisherDAO.getID(name)));
+                    if (MessageBox.Show("Želite li izbrisati ovog izdavača?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        PublisherDAO.Delete(PublisherDAO.getByID(PublisherDAO.getID(name)));
 
-                    MessageBox.Show("Publisher is now deleted!");
-                    i = 3;
-                    Form4_Load(sender, e);
+                        MessageBox.Show("Izdavač je uspiješno izbrisan!");
+                        i = 3;
+                        Form4_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to delete this publisher?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        PublisherDAO.Delete(PublisherDAO.getByID(PublisherDAO.getID(name)));
+
+                        MessageBox.Show("Publisher is now deleted!");
+                        i = 3;
+                        Form4_Load(sender, e);
+                    }
                 }
                 i = 0;
             }
             else if (searchBox.SelectedIndex == 4)
             {
-                if (MessageBox.Show("Do you want to delete this book store?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    BookStoreDAO.Delete(BookStoreDAO.getByID(BookStoreDAO.getID(name_bs)));
-                    MessageBox.Show("Book store is now deleted!");
-                    i = 4;
-                    Form4_Load(sender, e);
+                    if (MessageBox.Show("Želite li izbrisati ovu knjižaru?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        BookStoreDAO.Delete(BookStoreDAO.getByID(BookStoreDAO.getID(name_bs)));
+                        MessageBox.Show("Knjižara je uspiješno izbrisana!");
+                        i = 4;
+                        Form4_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you want to delete this book store?", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        BookStoreDAO.Delete(BookStoreDAO.getByID(BookStoreDAO.getID(name_bs)));
+                        MessageBox.Show("Book store is now deleted!");
+                        i = 4;
+                        Form4_Load(sender, e);
+                    }
                 }
                 i = 0;
             }
@@ -699,11 +910,25 @@ namespace BookStore
 
         private void logout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                this.Hide();
+                
+                if (MessageBox.Show("Želite li se odjaviti?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    
+                    this.Hide();
 
-                Application.Exit();
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.Hide();
+
+                    Application.Exit();
+                }
             }
         }
 

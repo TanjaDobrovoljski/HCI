@@ -118,6 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 208</value>
+  </data>
+  <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 32</value>
+  </data>
+  <data name="clearButton.Text" xml:space="preserve">
+    <value>OBRIŠI</value>
+  </data>
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 208</value>
+  </data>
+  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 32</value>
+  </data>
+  <data name="saveButton.Text" xml:space="preserve">
+    <value>SAČUVAJ</value>
+  </data>
+  <data name="priceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="priceLabel.Text" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="quantityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 17</value>
+  </data>
+  <data name="quantityLabel.Text" xml:space="preserve">
+    <value>Količina</value>
+  </data>
+  <data name="bookStoreLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="bookStoreLabel.Text" xml:space="preserve">
+    <value>Dostupna u knjižari</value>
+  </data>
+  <data name="saveInBookStoreLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 25</value>
+  </data>
+  <data name="saveInBookStoreLabel.Text" xml:space="preserve">
+    <value>Sačuvati u knjižari</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1249,5 +1291,8 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Čuvanje u knjižari</value>
   </data>
 </root>

@@ -204,9 +204,6 @@
     <EmbeddedResource Include="AddingFormAuthor.resx">
       <DependentUpon>AddingFormAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddingFormAuthor.sa-IN.resx">
-      <DependentUpon>AddingFormAuthor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddingFormAuthor.sr-Latn.resx">
       <DependentUpon>AddingFormAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +271,9 @@
       <DependentUpon>ModifyBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyBookForm.sr-Latn.resx">
+      <DependentUpon>ModifyBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyBookForm.ssy.resx">
       <DependentUpon>ModifyBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyBookStoreForm.resx">

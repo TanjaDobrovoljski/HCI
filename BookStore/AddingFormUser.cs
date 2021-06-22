@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,20 +38,42 @@ namespace BookStore
 
             if (usernameTextBox.Text == "")
             {
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.usernameTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                { 
                 ActiveControl = this.usernameTextBox;
                 MessageBox.Show("Please make sure all required fields are filled out correctly.");
             }
+            }
             else if (passwordTextBox.Text == "")
             {
-                ActiveControl = this.passwordTextBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.passwordTextBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.passwordTextBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             else if (bookstoreBox.SelectedIndex==-1)
             {
-                ActiveControl = this.bookstoreBox;
-                MessageBox.Show("Please make sure all required fields are filled out correctly.");
-
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    ActiveControl = this.bookstoreBox;
+                    MessageBox.Show("Molimo vas da popunite sva polja.");
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+                    ActiveControl = this.bookstoreBox;
+                    MessageBox.Show("Please make sure all required fields are filled out correctly.");
+                }
             }
             
             else
@@ -66,14 +89,20 @@ namespace BookStore
                     {
                         UserDAO.Insert(u);
                         BookStoreHasUserDAO.Insert(BookStoreDAO.getByID(BookStoreDAO.getID(bookstoreBox.Text)), u);
-                        MessageBox.Show("User is now added!");
+                        if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                        { MessageBox.Show("Korisnik je dodan!"); }
+                        else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                            MessageBox.Show("User is now added!");
                         this.Close();
                         
                         
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error happened!");
+                        if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                        { MessageBox.Show("Desila se greška!"); }
+                        else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                            MessageBox.Show("Error happened!");
                         return;
                     }
                     usernameTextBox.Text = "";
@@ -83,7 +112,10 @@ namespace BookStore
                 }
                 else
                 {
-                    MessageBox.Show("This user already exist");
+                    if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                    { MessageBox.Show("Korisnik već postoji"); }
+                    else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                        MessageBox.Show("This user already exist");
                     usernameTextBox.Text = "";
                     passwordTextBox.Text = "";
                     bookstoreBox.SelectedIndex = -1;
@@ -94,15 +126,26 @@ namespace BookStore
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            
-            if (MessageBox.Show("Do you want to clear all data?", "Clearing", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                usernameTextBox.Text = "";
-                passwordTextBox.Text = "";
-                bookstoreBox.SelectedIndex = -1;
-                ActiveControl = this.usernameTextBox;
+                if (MessageBox.Show("Želite li sve obrisati?", "Brisanje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    usernameTextBox.Text = "";
+                    passwordTextBox.Text = "";
+                    bookstoreBox.SelectedIndex = -1;
+                    ActiveControl = this.usernameTextBox;
+                }
             }
-            
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            {
+                if (MessageBox.Show("Do you want to clear all data?", "Clearing", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    usernameTextBox.Text = "";
+                    passwordTextBox.Text = "";
+                    bookstoreBox.SelectedIndex = -1;
+                    ActiveControl = this.usernameTextBox;
+                }
+            }
         }
     }
 }

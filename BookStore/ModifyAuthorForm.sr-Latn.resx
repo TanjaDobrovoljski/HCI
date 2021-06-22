@@ -118,6 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 368</value>
+  </data>
+  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 31</value>
+  </data>
+  <data name="saveButton.Text" xml:space="preserve">
+    <value>SAČUVAJ</value>
+  </data>
+  <data name="lastNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="lastNameLabel.Text" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="dateBirthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="dateBirthLabel.Text" xml:space="preserve">
+    <value>Datum rođenja</value>
+  </data>
+  <data name="birthPlaceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="birthPlaceLabel.Text" xml:space="preserve">
+    <value>Mjesto rođenja</value>
+  </data>
+  <data name="booksLabel.Text" xml:space="preserve">
+    <value>Knjige</value>
+  </data>
+  <data name="firstNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 17</value>
+  </data>
+  <data name="firstNameLabel.Text" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="modifyAuthorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 25</value>
+  </data>
+  <data name="modifyAuthorLabel.Text" xml:space="preserve">
+    <value>Modifikacija autora</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAPAKAADwCgAAAAAAAAAA
@@ -1249,5 +1291,8 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Modifikacija Forma - Autor</value>
   </data>
 </root>

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,9 +36,25 @@ namespace BookStore
 
             this.bookStoreId = bookStoreId;
 
-            searchTitleBox.Items.Add("None()");
-            searchPublisherBox.Items.Add("None()");
-            searchAuthorBox.Items.Add("None()");
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                searchTitleBox.Items.Clear();
+                searchPublisherBox.Items.Clear();
+                searchAuthorBox.Items.Clear();
+
+                searchTitleBox.Items.Add("None()");
+                searchPublisherBox.Items.Add("None()");
+                searchAuthorBox.Items.Add("None()");
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+             {
+                searchTitleBox.Items.Clear();
+                searchPublisherBox.Items.Clear();
+                searchAuthorBox.Items.Clear();
+                searchTitleBox.Items.Add("None()");
+                searchPublisherBox.Items.Add("None()");
+                searchAuthorBox.Items.Add("None()");
+            }
 
 
         }
@@ -331,8 +348,13 @@ namespace BookStore
                 storeLetter.Text = "C";
             }
 
-           
-            bookStoreInfromation.Text = "Address: " + BookStoreDAO.getByID(bookStoreId).getAddress()+"  Work time: "+ BookStoreDAO.getByID(bookStoreId).getWorkTime() ;
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                bookStoreInfromation.Text = "Adresa: " + BookStoreDAO.getByID(bookStoreId).getAddress() + "  Radno vrijeme: " + BookStoreDAO.getByID(bookStoreId).getWorkTime();
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            
+                bookStoreInfromation.Text = "Address: " + BookStoreDAO.getByID(bookStoreId).getAddress()+"  Work time: "+ BookStoreDAO.getByID(bookStoreId).getWorkTime() ;
 
             getSpecificData(bookStoreId);
 
@@ -443,10 +465,22 @@ namespace BookStore
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                Form1 f = new Form1();
-                f.ShowDialog();
+                if (MessageBox.Show("Želite li se izlogovati?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Form1 f = new Form1();
+                    f.ShowDialog();
+                }
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            {
+
+                if (MessageBox.Show("Do you want to log out?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Form1 f = new Form1();
+                    f.ShowDialog();
+                }
             }
         }
 

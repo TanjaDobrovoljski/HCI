@@ -155,12 +155,20 @@ namespace BookStore.Model
                 MySqlCommand cmd = new MySqlCommand(query, conn.connection);
 
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-
+                BookStore1 b;
 
                 while (dataReader.Read())
                 {
-                    BookStore1 b = new BookStore1(dataReader["name"].ToString(), dataReader["address"].ToString(), dataReader["work_time"].ToString(), dataReader["opening_date"].ToString().Replace("12:00:00 AM", ""));
-                    list.Add(b);
+                    if (dataReader["opening_date"].ToString().Contains("12:00:00 AM") == true)
+                    {
+                        b = new BookStore1(dataReader["name"].ToString(), dataReader["address"].ToString(), dataReader["work_time"].ToString(), dataReader["opening_date"].ToString().Replace(". 12:00:00 AM", ""));
+                        list.Add(b);
+                    }
+                    else if (dataReader["opening_date"].ToString().Contains("00:00:00") == true)
+                    {
+                        b = new BookStore1(dataReader["name"].ToString(), dataReader["address"].ToString(), dataReader["work_time"].ToString(), dataReader["opening_date"].ToString().Replace(". 00:00:00", ""));
+                        list.Add(b);
+                    }
 
                 }
 
