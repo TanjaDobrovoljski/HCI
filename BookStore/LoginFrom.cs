@@ -15,9 +15,9 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class Form1 : Form
+    public partial class LoginFrom : Form
     {
-        public Form1()
+        public LoginFrom()
         {
             InitializeComponent();
             
@@ -44,7 +44,7 @@ namespace BookStore
             {
                 usernameText.Text = "Korisnicko ime";
                 
-                usernameText.ForeColor = Color.Gray;
+                usernameText.ForeColor = Color.Silver;
             }
             else
             {
@@ -53,7 +53,7 @@ namespace BookStore
                     lan = 0;
                     usernameText.Text = "Username";
 
-                    usernameText.ForeColor = Color.Gray;
+                    usernameText.ForeColor = Color.Silver;
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace BookStore
                     lan = 0;
                     passwordText.Text = "Password";
 
-                    passwordText.ForeColor = Color.Gray;
+                    passwordText.ForeColor = Color.Silver;
                 }
             }
 
@@ -92,10 +92,14 @@ namespace BookStore
 
         private void serbianButton_Click(object sender, EventArgs e)
         {
-            var changeLanguage = new ChangeLanguage();
-            changeLanguage.UpdateConfig("language", "sr-Latn");
-            Application.Restart();
-
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            { MessageBox.Show("Aplikacija je vec na srpskom jeziku!"); }
+            else
+            {
+                var changeLanguage = new ChangeLanguage();
+                changeLanguage.UpdateConfig("language", "sr-Latn");
+                Application.Restart();
+            }
 
 
         }
@@ -109,12 +113,12 @@ namespace BookStore
             }
         }*/
 
-        private void englishButton_Click(object sender, EventArgs e)
+       /* private void englishButton_Click(object sender, EventArgs e)
         {
             var changeLanguage = new ChangeLanguage();
             changeLanguage.UpdateConfig("language", "en");
-            Application.Restart();
-        }
+            LoginFrom_Load(sender, e);
+        }*/
 
         public string GetMD5(string text) //hesiranje lozinke
         {
@@ -131,20 +135,21 @@ namespace BookStore
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-            if (string.IsNullOrWhiteSpace(usernameText.Text) || passwordText.Text == "")
+            if (usernameText.Text=="" || passwordText.Text == "" || passwordText.ForeColor == Color.Silver || usernameText.ForeColor == Color.Silver)
             {
                 if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
                     MessageBox.Show("Trebate popuniti korisničko ime ili lozinku!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ActiveControl = this.passwordText;
+                    ActiveControl = this.usernameText;
                 }
                 else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
                     MessageBox.Show("You should enter password and username!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
+                    ActiveControl = this.passwordText;
+                    ActiveControl = this.usernameText;
+                }
+               }
             else
             {
                 string userName = usernameText.Text;
@@ -165,6 +170,7 @@ namespace BookStore
                             this.Hide();
                             AdminForm f3 = new AdminForm(1, userName);
                             f3.ShowDialog();
+                            Application.Exit();
                            /* this.Close();
                             this.usernameText.Text = "";
                             this.passwordText.Text = "";*/
@@ -179,9 +185,10 @@ namespace BookStore
 
                             int i = BookStoreHasUserDAO.getBookStoreID(UserDAO.getByID(UserDAO.getID(userName)));
                             this.Hide();
-                            Form2 f2 = new Form2(i);
+                            UserForm f2 = new UserForm(i);
 
                             f2.ShowDialog();
+                            Application.Exit();
                             /*this.passwordText.Text = "";
                             this.usernameText.Text = "";
                             ActiveControl = this.usernameText;
@@ -198,6 +205,7 @@ namespace BookStore
                             MessageBox.Show("Incorrect password");
                         this.passwordText.Text = "";
                         this.usernameText.Text = "";
+                        ActiveControl = this.passwordText;
                         ActiveControl = this.usernameText;
                         this.Show();
                     }
@@ -221,9 +229,10 @@ namespace BookStore
 
                     int i = BookStoreHasUserDAO.getBookStoreID(UserDAO.getByID(UserDAO.getID(userName)));
                     this.Hide();
-                    Form2 f = new Form2(i);
+                    UserForm f = new UserForm(i);
 
                     f.ShowDialog();
+                    Application.Exit();
                     /*this.passwordText.Text = "";
                     this.usernameText.Text = "";
                     ActiveControl = this.usernameText;
@@ -240,9 +249,19 @@ namespace BookStore
 
         private void englishButton_Click_1(object sender, EventArgs e)
         {
-            var changeLanguage = new ChangeLanguage();
-            changeLanguage.UpdateConfig("language", "en");
-            Application.Restart();
+            if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            { MessageBox.Show("You application is already in english!"); }
+            else
+            {
+                var changeLanguage = new ChangeLanguage();
+                changeLanguage.UpdateConfig("language", "en");
+                Application.Restart();
+            }
+        }
+
+        private void LoginFrom_Load(object sender, EventArgs e)
+        {
+            InitializeComponent();
         }
     }
 }

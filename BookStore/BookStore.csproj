@@ -7,7 +7,7 @@
     <ProjectGuid>{F09763C0-913C-4F37-9657-D8677618A2DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BookStore</RootNamespace>
-    <AssemblyName>BookStore</AssemblyName>
+    <AssemblyName>BookStore Catalogue</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>address_book.ico</ApplicationIcon>
+    <ApplicationIcon>book_of_pages.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -123,31 +123,48 @@
     <Compile Include="AddingFormUser.Designer.cs">
       <DependentUpon>AddingFormUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookDetailsForm.Designer.cs">
+      <DependentUpon>BookDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookStoreSave4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookStoreSave4.Designer.cs">
       <DependentUpon>BookStoreSave4.cs</DependentUpon>
     </Compile>
+    <Compile Include="book_storeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>book_storeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ChangeLanguage.cs" />
     <Compile Include="ConnectionPool.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginFrom.Designer.cs">
+      <DependentUpon>LoginFrom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Author.cs" />
     <Compile Include="Model\AuthorDAO.cs" />
@@ -231,35 +248,41 @@
     <EmbeddedResource Include="AddingFormUser.sr-Latn.resx">
       <DependentUpon>AddingFormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookDetailsForm.resx">
+      <DependentUpon>BookDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookDetailsForm.sr-Latn.resx">
+      <DependentUpon>BookDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookStoreSave4.resx">
       <DependentUpon>BookStoreSave4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookStoreSave4.sr-Latn.resx">
       <DependentUpon>BookStoreSave4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.en.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginFrom.en.resx">
+      <DependentUpon>LoginFrom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginFrom.resx">
+      <DependentUpon>LoginFrom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.sr-Latn.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginFrom.sr-Latn.resx">
+      <DependentUpon>LoginFrom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.en.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="UserForm.en.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.sr-Latn.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="UserForm.sr-Latn.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.sr-Latn.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForm.sr-Latn.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyAuthorForm.resx">
       <DependentUpon>ModifyAuthorForm.cs</DependentUpon>
@@ -299,6 +322,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="book_storeDataSet.xsc">
+      <DependentUpon>book_storeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="book_storeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>book_storeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="book_storeDataSet.xss">
+      <DependentUpon>book_storeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -324,6 +358,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="address_book.ico" />
+    <Content Include="book_of_pages.ico" />
     <Content Include="grobnica.jpg" />
     <Content Include="libra_logo.png" />
     <None Include="Resources\right.ico" />

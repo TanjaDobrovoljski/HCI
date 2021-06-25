@@ -22,8 +22,7 @@ namespace BookStore.Model
             this.publishing_year = publishing_year;
             this.description = description;
             this.publisher = publisher;
-            
-                this.image = image;
+            this.image = image;
             
         }
 

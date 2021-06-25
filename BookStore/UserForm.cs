@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class Form2 : Form
+    public partial class UserForm : Form
     {
 
         private int tipKorisnika;
@@ -30,7 +30,7 @@ namespace BookStore
        
 
 
-        public Form2(int bookStoreId)
+        public UserForm(int bookStoreId)
         {
             InitializeComponent();
 
@@ -56,10 +56,22 @@ namespace BookStore
                 searchAuthorBox.Items.Add("None()");
             }
 
-
+           
+            
         }
 
-        public Form2(int i,string u)
+        void p_Click(object sender, EventArgs e,string nesto)
+        {
+
+            BookDetailsForm f = new BookDetailsForm(nesto);
+            f.ShowDialog();
+
+            
+        }
+        
+        
+
+        public UserForm(int i,string u)
         {
             this.tipKorisnika = i;
             this.userName = u;
@@ -81,7 +93,7 @@ namespace BookStore
                 pic = new PictureBox();
                 pic.Height = 150;
                 pic.Width = 100;
-
+                
                 pic.BackgroundImageLayout = ImageLayout.Stretch;
                 //pic.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
 
@@ -92,6 +104,8 @@ namespace BookStore
                 text.BackColor = Color.LightYellow;
                 text.TextAlign = ContentAlignment.MiddleCenter;
                 text.Dock = DockStyle.Bottom;
+
+                string title = list[i].getBook().getTitle();
 
                 Bitmap bm = new Bitmap(list[i].getBook().getImagePath());
                 pic.BackgroundImage = bm;
@@ -115,12 +129,15 @@ namespace BookStore
 
                 ToolTip toolTip = new ToolTip();
                 toolTip.ShowAlways = true;
-                toolTip.AutoPopDelay = 1000000000;
+                toolTip.AutoPopDelay = 32000;
+                toolTip.ReshowDelay = 0;
                 toolTip.InitialDelay = 300;
                 toolTip.SetToolTip(pic, list[i].getBook().getDescription());
 
 
-                
+                pic.Click += delegate (object sender, EventArgs e) { p_Click(sender, e, title); };
+
+
 
             }
 
@@ -156,6 +173,7 @@ namespace BookStore
                     text.TextAlign = ContentAlignment.MiddleCenter;
                     text.Dock = DockStyle.Bottom;
 
+                    string title2 = list[i].getBook().getTitle();
                     Bitmap bm = new Bitmap(list[i].getBook().getImagePath());
                     pic.BackgroundImage = bm;
 
@@ -172,6 +190,7 @@ namespace BookStore
                     toolTip.SetToolTip(pic, list[i].getBook().getDescription());
 
 
+                    pic.Click += delegate (object sender, EventArgs e) { p_Click(sender, e, title2); };
 
                 }
             }
@@ -210,6 +229,7 @@ namespace BookStore
                         text.TextAlign = ContentAlignment.MiddleCenter;
                         text.Dock = DockStyle.Bottom;
 
+                    string title = list[i].getBook().getTitle();
                         Bitmap bm = new Bitmap(list[i].getBook().getImagePath());
                         pic.BackgroundImage = bm;
 
@@ -224,9 +244,12 @@ namespace BookStore
                         toolTip.InitialDelay = 300;
                         toolTip.SetToolTip(pic, list[i].getBook().getDescription());
 
-                    }
-                
-                
+
+                    pic.Click += delegate (object sender, EventArgs e) { p_Click(sender, e, title); };
+
+                }
+
+
             }
 
         }
@@ -262,7 +285,7 @@ namespace BookStore
                     text.BackColor = Color.LightYellow;
                     text.TextAlign = ContentAlignment.MiddleCenter;
                     text.Dock = DockStyle.Bottom;
-
+                    string title = list[i].getBook().getTitle();
                     Bitmap bm = new Bitmap(list[i].getBook().getImagePath());
                     pic.BackgroundImage = bm;
 
@@ -276,6 +299,9 @@ namespace BookStore
                     toolTip.AutoPopDelay = 1000000000;
                     toolTip.InitialDelay = 300;
                     toolTip.SetToolTip(pic, list[i].getBook().getDescription());
+
+
+                    pic.Click += delegate (object sender, EventArgs e) { p_Click(sender, e, title); };
 
                 }
 
@@ -311,6 +337,8 @@ namespace BookStore
                 Bitmap bm = new Bitmap(list[i].getImagePath());
                 pic.BackgroundImage = bm;
 
+                string title = list[i].getTitle();
+
                 pic.Controls.Add(text);
                 flowLayoutPanel1.Controls.Add(pic);
 
@@ -323,7 +351,8 @@ namespace BookStore
 
                 //this.tip = new CustomToolTip();
                 //this.tip.SetToolTip(pic, list[i].getDescription());
-                
+                pic.Click += delegate (object sender, EventArgs e) { p_Click(sender, e, title); };
+
             }
         }
 
@@ -347,6 +376,14 @@ namespace BookStore
             {
                 storeLetter.Text = "C";
             }
+
+            searchAuthorBox.SelectedIndex = -1;
+            searchTitleBox.SelectedIndex = -1;
+            searchPublisherBox.SelectedIndex = -1;
+
+            searchAuthorBox.Enabled = true;
+            searchTitleBox.Enabled = true;
+            searchPublisherBox.Enabled = true;
 
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
@@ -467,7 +504,7 @@ namespace BookStore
         {
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
-                if (MessageBox.Show("Želite li se izlogovati?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Želite li se odjaviti?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Application.Exit();
                 }

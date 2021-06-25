@@ -1,7 +1,7 @@
 ﻿
 namespace BookStore
 {
-    partial class Form2
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace BookStore
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.logo = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.searchTitleBox = new System.Windows.Forms.ComboBox();

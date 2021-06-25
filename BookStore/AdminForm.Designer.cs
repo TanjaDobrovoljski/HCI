@@ -22,7 +22,7 @@ namespace BookStore
         }
 
 
-        
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -34,7 +34,6 @@ namespace BookStore
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logoutButton2 = new System.Windows.Forms.Button();
             this.listPanel2 = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.ComboBox();
             this.deleteButton2 = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@ namespace BookStore
             this.authorLabel = new System.Windows.Forms.Label();
             this.addAuthorButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.logoutButton2 = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.listPanel2.SuspendLayout();
@@ -84,7 +84,7 @@ namespace BookStore
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addBook);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.addAuthor);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tableLayoutPanel1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1160, 535);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1160, 551);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -92,7 +92,7 @@ namespace BookStore
             // toolStripContainer1.RightToolStripPanel
             // 
             this.toolStripContainer1.RightToolStripPanel.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.toolStripContainer1.Size = new System.Drawing.Size(1160, 560);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1160, 576);
             this.toolStripContainer1.TabIndex = 0;
             // 
             // panel1
@@ -101,20 +101,8 @@ namespace BookStore
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Location = new System.Drawing.Point(408, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(24, 544);
+            this.panel1.Size = new System.Drawing.Size(24, 560);
             this.panel1.TabIndex = 9;
-            // 
-            // logoutButton2
-            // 
-            this.logoutButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.logoutButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.logoutButton2.Location = new System.Drawing.Point(3, 501);
-            this.logoutButton2.Name = "logoutButton2";
-            this.logoutButton2.Size = new System.Drawing.Size(128, 32);
-            this.logoutButton2.TabIndex = 5;
-            this.logoutButton2.Text = "LOGOUT";
-            this.logoutButton2.UseVisualStyleBackColor = true;
-            this.logoutButton2.Click += new System.EventHandler(this.logout_Click);
             // 
             // listPanel2
             // 
@@ -126,7 +114,7 @@ namespace BookStore
             this.listPanel2.Controls.Add(this.modifyButton);
             this.listPanel2.Controls.Add(this.showListLabel);
             this.listPanel2.Controls.Add(this.dataGridView);
-            this.listPanel2.Location = new System.Drawing.Point(456, 48);
+            this.listPanel2.Location = new System.Drawing.Point(456, 56);
             this.listPanel2.Name = "listPanel2";
             this.listPanel2.Size = new System.Drawing.Size(696, 400);
             this.listPanel2.TabIndex = 10;
@@ -181,11 +169,16 @@ namespace BookStore
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(56, 72);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(624, 256);
@@ -358,6 +351,18 @@ namespace BookStore
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1160, 536);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
+            // logoutButton2
+            // 
+            this.logoutButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.logoutButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.logoutButton2.Location = new System.Drawing.Point(3, 501);
+            this.logoutButton2.Name = "logoutButton2";
+            this.logoutButton2.Size = new System.Drawing.Size(128, 32);
+            this.logoutButton2.TabIndex = 5;
+            this.logoutButton2.Text = "LOGOUT";
+            this.logoutButton2.UseVisualStyleBackColor = true;
+            this.logoutButton2.Click += new System.EventHandler(this.logout_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,12 +406,12 @@ namespace BookStore
         private System.Windows.Forms.Button addBookButton;
         private System.Windows.Forms.Button addAuthorButton;
         private System.Windows.Forms.Button addUserButton;
-       // private System.Windows.Forms.Panel listPanel;
+        // private System.Windows.Forms.Panel listPanel;
         private System.Windows.Forms.Label showListLabel;
         private System.Windows.Forms.ComboBox searchBox;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button modifyButton;
-       // private System.Windows.Forms.Button deleteButton;
+        // private System.Windows.Forms.Button deleteButton;
         //private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button logoutButton2;
         //private System.Windows.Forms.Panel listPanel1;
@@ -418,5 +423,5 @@ namespace BookStore
     }
 }
 
-        
-    
+
+

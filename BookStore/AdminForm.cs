@@ -29,7 +29,8 @@ namespace BookStore
             
             toolStripContainer1.Dock = DockStyle.Fill;
             listPanel2.Anchor = AnchorStyles.Right;
-           // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            dataGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
 
             if (Thread.CurrentThread.CurrentCulture.Name== "sr-Latn")
             {
@@ -69,7 +70,9 @@ namespace BookStore
             
             toolStripContainer1.Dock = DockStyle.Fill;
             listPanel2.Anchor = AnchorStyles.Right;
-           // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            
+            dataGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
+            // logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
                 logoutButton2.Text = "ODJAVA";
@@ -103,6 +106,7 @@ namespace BookStore
         {
             toolStripContainer1.Dock = DockStyle.Fill;
             listPanel2.Anchor = AnchorStyles.Right;
+            dataGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
             //logoutButton2.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
@@ -142,13 +146,13 @@ namespace BookStore
 
         private void showUser()
         {
+            dataGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
             dataGridView.Columns.Clear();
             dataGridView.Rows.Clear();
             dataGridView.AutoResizeColumns();
 
 
-            dataGridView.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView.AutoSizeColumnsMode =DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridView.ColumnCount = 4;
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
@@ -207,6 +211,7 @@ namespace BookStore
 
         private void showAuthor()
         {
+            dataGridView.DefaultCellStyle.Font = new Font("Tahoma", 12);
             dataGridView.Columns.Clear();
             dataGridView.Rows.Clear();
             dataGridView.AutoResizeColumns();

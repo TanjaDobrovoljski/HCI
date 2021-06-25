@@ -26,7 +26,12 @@ namespace BookStore
 
         public AddingFormBook()
         {
+
             
+            ActiveControl = this.publishingYearTextBox;
+            ActiveControl = this.descriptionTextBox;
+            ActiveControl = this.imageTextBox;
+            ActiveControl = this.titleTextBox;
 
             InitializeComponent();
         }
@@ -45,8 +50,11 @@ namespace BookStore
             for (int i = 0; i < list2.Count; i++)
                 authorComboBox.Items.Add(list2[i].getFirstName()+" "+list2[i].getLastName());
 
-            
-            
+            ActiveControl = this.publishingYearTextBox;
+            ActiveControl = this.descriptionTextBox;
+            ActiveControl = this.imageTextBox;
+            ActiveControl = this.titleTextBox;
+
 
         }
 
@@ -65,7 +73,7 @@ namespace BookStore
                     MessageBox.Show("Please make sure all required fields are filled out correctly.");
                 }
             }
-            else if (publishingYearTextBox.Text == "")
+            else if (publishingYearTextBox.Text == "" || publishingYearTextBox.ForeColor == Color.Silver)
             {
                 if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
@@ -114,13 +122,8 @@ namespace BookStore
                 author = authorComboBox.Text;
                 string[] result = author.Split(' ');
 
-               
 
-                
-
-                
-
-                if (imageTextBox.Text == "")
+                if (imageTextBox.ForeColor == Color.Silver)
                     image = "noimage";
                 else
                     image = imageTextBox.Text;
@@ -134,10 +137,10 @@ namespace BookStore
                 }
                 Console.WriteLine(image);
 
+                if (descriptionTextBox.ForeColor == Color.Silver)
+                    description = "";
+                else
                 description = descriptionTextBox.Text;
-
-
-
 
                 try
                 {
@@ -146,6 +149,11 @@ namespace BookStore
                     { MessageBox.Show("Knjiga je dodata!"); }
                     else if (Thread.CurrentThread.CurrentCulture.Name == "en")
                         MessageBox.Show("Book is now added!");
+
+                    ActiveControl = this.publishingYearTextBox;
+                    ActiveControl = this.descriptionTextBox;
+                    ActiveControl = this.imageTextBox;
+                    ActiveControl = this.titleTextBox;
                 }
                 catch (Exception)
                 {
@@ -154,6 +162,11 @@ namespace BookStore
                     else if (Thread.CurrentThread.CurrentCulture.Name == "en")
                         MessageBox.Show("Error happened!");
                     return;
+
+                    ActiveControl = this.publishingYearTextBox;
+                    ActiveControl = this.descriptionTextBox;
+                    ActiveControl = this.imageTextBox;
+                    ActiveControl = this.titleTextBox;
                 }
 
                 Book b = new Book(title, Int32.Parse(publishing_year), PublisherDAO.getByID(PublisherDAO.getID(publisher)), description, image);
@@ -172,10 +185,14 @@ namespace BookStore
 
                 imageTextBox.Text = "";
                 descriptionTextBox.Text = "";
+                ActiveControl = this.publishingYearTextBox;
+                ActiveControl = this.descriptionTextBox;
+                ActiveControl = this.imageTextBox;
+                ActiveControl = this.titleTextBox;
 
                 if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
-                    DialogResult dialogResult = MessageBox.Show(" Do you want to add this book in Book StoreDa li želite dodati knjigu u određenu knjižaru?", "", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Da li želite dodati knjigu u određenu knjižaru?", "", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         BookStoreSave4 f = new BookStoreSave4();
@@ -193,7 +210,7 @@ namespace BookStore
                 }
 
                 this.Close();
-                ActiveControl = this.titleTextBox;
+                
 
             }
         }
@@ -260,12 +277,43 @@ namespace BookStore
 
         private void imageTextBox_Enter(object sender, EventArgs e)
         {
-            
+            if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+            {
+                if (imageTextBox.Text == "Naziv slike.(Nije neophodno!)")
+                {
+                    imageTextBox.Text = "";
+                    imageTextBox.ForeColor = Color.Black;
+                }
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+            {
+
+                if (imageTextBox.Text == "Image name.(It's not required!)")
+                {
+                    imageTextBox.Text = "";
+                    imageTextBox.ForeColor = Color.Black;
+                }
+            }
         }
 
         private void imageTextBox_Leave(object sender, EventArgs e)
         {
-            
+            if (imageTextBox.Text == "")
+            {
+                if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
+                {
+                    imageTextBox.Text = "Naziv slike.(Nije neophodno!)";
+
+                    imageTextBox.ForeColor = Color.Silver;
+                }
+                else if (Thread.CurrentThread.CurrentCulture.Name == "en")
+                {
+
+                    imageTextBox.Text = "Image name.(It's not required!)";
+
+                    imageTextBox.ForeColor = Color.Silver;
+                }
+            }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -282,6 +330,10 @@ namespace BookStore
 
                     imageTextBox.Text = "";
                     descriptionTextBox.Text = "";
+                    ActiveControl = this.publishingYearTextBox;
+                    ActiveControl = this.descriptionTextBox;
+                    ActiveControl = this.imageTextBox;
+                    ActiveControl = this.titleTextBox;
                 }
             }
             else if (Thread.CurrentThread.CurrentCulture.Name == "en")
@@ -297,6 +349,10 @@ namespace BookStore
 
                     imageTextBox.Text = "";
                     descriptionTextBox.Text = "";
+                    ActiveControl = this.publishingYearTextBox;
+                    ActiveControl = this.descriptionTextBox;
+                    ActiveControl = this.imageTextBox;
+                    ActiveControl = this.titleTextBox;
                 }
             }
             

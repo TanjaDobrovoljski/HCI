@@ -1,7 +1,7 @@
 ﻿
 namespace BookStore
 {
-    partial class Form1
+    partial class LoginFrom
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace BookStore
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrom));
             this.usernameText = new System.Windows.Forms.TextBox();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.LogInButton = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@ namespace BookStore
             this.englishButton.UseVisualStyleBackColor = true;
             this.englishButton.Click += new System.EventHandler(this.englishButton_Click_1);
             // 
-            // Form1
+            // LoginFrom
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +84,8 @@ namespace BookStore
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.passwordText);
             this.Controls.Add(this.usernameText);
-            this.Name = "Form1";
+            this.Name = "LoginFrom";
+            this.Load += new System.EventHandler(this.LoginFrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

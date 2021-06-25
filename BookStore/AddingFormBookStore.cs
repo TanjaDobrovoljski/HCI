@@ -25,6 +25,7 @@ namespace BookStore
             InitializeComponent();
             ActiveControl = this.openningDateTextBox;
             ActiveControl = this.workTimeTextBox;
+            ActiveControl = this.nameTextBox;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -119,6 +120,7 @@ namespace BookStore
                     openningDateTextBox.Text = "";
                     ActiveControl = this.openningDateTextBox;
                     ActiveControl = this.workTimeTextBox;
+                    ActiveControl = this.nameTextBox;
 
                 }
                 else
@@ -135,6 +137,7 @@ namespace BookStore
                     openningDateTextBox.Text = "";
                     ActiveControl = this.openningDateTextBox;
                     ActiveControl = this.workTimeTextBox;
+                    ActiveControl = this.nameTextBox;
                 }
 
             }
@@ -152,6 +155,7 @@ namespace BookStore
                     openningDateTextBox.Text = "";
                     ActiveControl = this.openningDateTextBox;
                     ActiveControl = this.workTimeTextBox;
+                    ActiveControl = this.nameTextBox;
                 }
             }
             else if (Thread.CurrentThread.CurrentCulture.Name == "en")
@@ -164,6 +168,7 @@ namespace BookStore
                     openningDateTextBox.Text = "";
                     ActiveControl = this.openningDateTextBox;
                     ActiveControl = this.workTimeTextBox;
+                    ActiveControl = this.nameTextBox;
                 }
             }
         }

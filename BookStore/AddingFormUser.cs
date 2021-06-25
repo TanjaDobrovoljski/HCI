@@ -20,7 +20,7 @@ namespace BookStore
         public AddingFormUser()
         {
             InitializeComponent();
-            
+            ActiveControl = this.usernameTextBox;
 
         }
         
@@ -29,6 +29,7 @@ namespace BookStore
             List<BookStore1> b = BookStoreDAO.Select();
             for (int i = 0; i < b.Count; i++)
                 bookstoreBox.Items.Add(b[i].getName());
+            ActiveControl = this.usernameTextBox;
 
 
         }
@@ -93,6 +94,7 @@ namespace BookStore
                         { MessageBox.Show("Korisnik je dodan!"); }
                         else if (Thread.CurrentThread.CurrentCulture.Name == "en")
                             MessageBox.Show("User is now added!");
+                        ActiveControl = this.usernameTextBox;
                         this.Close();
                         
                         
