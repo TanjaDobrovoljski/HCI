@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="searchTitleBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
   <data name="&gt;&gt;searchButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -147,14 +143,18 @@
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="flowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Top, Bottom</value>
   </data>
   <data name="searchPublisherText.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="searchTitleBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="logoutButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="searchAuthorText.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -709,7 +709,7 @@
     <value>$this</value>
   </data>
   <data name="searchAuthorText.Text" xml:space="preserve">
-    <value>Pretraga po autoru..</value>
+    <value>Search by author..</value>
   </data>
   <data name="bookstoreLetter.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -5479,6 +5479,9 @@
   <data name="&gt;&gt;bookStoreInfromation.Name" xml:space="preserve">
     <value>bookStoreInfromation</value>
   </data>
+  <data name="&gt;&gt;storeLetter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;logo.Name" xml:space="preserve">
     <value>logo</value>
   </data>
@@ -5486,16 +5489,10 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Katalog knjiga - Korisnik</value>
-  </data>
-  <data name="searchAuthorBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>BookCatalogue - User</value>
   </data>
   <data name="&gt;&gt;searchAuthorText.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="&gt;&gt;searchButton.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="&gt;&gt;storeLetter.Parent" xml:space="preserve">
     <value>$this</value>
@@ -5505,9 +5502,6 @@
   </data>
   <data name="&gt;&gt;searchPublisherText.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;showAllButton.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="searchTitleText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6696,13 +6690,10 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="logoutButton.Text" xml:space="preserve">
-    <value>Odjava</value>
+    <value>LOGOUT</value>
   </data>
   <data name="&gt;&gt;showAllButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="storeLetter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>561, 40</value>
   </data>
   <data name="searchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7318,20 +7309,20 @@
   <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>446, 21</value>
   </data>
-  <data name="searchTitleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 153</value>
-  </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 136</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form2</value>
+  <data name="searchTitleBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 24</value>
   </data>
-  <data name="&gt;&gt;showAllButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserForm</value>
+  </data>
+  <data name="&gt;&gt;searchButton.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="searchTitleText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 25</value>
+    <value>162, 25</value>
   </data>
   <data name="&gt;&gt;logoutButton.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -7345,11 +7336,8 @@
   <data name="&gt;&gt;searchPublisherBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="searchAuthorText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
   <data name="searchPublisherText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 272</value>
+    <value>8, 288</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -7375,8 +7363,8 @@
   <data name="searchButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="searchTitleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 24</value>
+  <data name="&gt;&gt;showAllButton.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;searchPublisherBox.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -7387,14 +7375,11 @@
   <data name="&gt;&gt;searchTitleText.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="searchPublisherBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
   <data name="storeLetter.Text" xml:space="preserve">
     <value>A</value>
   </data>
   <data name="searchTitleText.Text" xml:space="preserve">
-    <value>Pretraga po naslovu..</value>
+    <value>Search by title..</value>
   </data>
   <data name="bookstoreLetter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -7406,7 +7391,7 @@
     <value>11</value>
   </data>
   <data name="searchPublisherText.Text" xml:space="preserve">
-    <value>Pretraga po izdavaču..</value>
+    <value>Search by publisher..</value>
   </data>
   <data name="bookstoreLetter.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 58</value>
@@ -7426,14 +7411,11 @@
   <data name="&gt;&gt;bookStoreInfromation.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="searchTitleText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
   <data name="logoutButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
   <data name="searchPublisherText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 25</value>
+    <value>216, 25</value>
   </data>
   <data name="&gt;&gt;searchAuthorText.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -7471,14 +7453,14 @@
   <data name="logo.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="&gt;&gt;storeLetter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="showAllButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="searchTitleBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 153</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -7487,7 +7469,7 @@
     <value>1000, 552</value>
   </data>
   <data name="showAllButton.Text" xml:space="preserve">
-    <value>Prikazi sve</value>
+    <value>ShowAll</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -7506,6 +7488,9 @@
   </data>
   <data name="&gt;&gt;bookstoreLetter.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;showAllButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="bookstoreLetter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7537,8 +7522,8 @@
   <data name="&gt;&gt;searchPublisherBox.Name" xml:space="preserve">
     <value>searchPublisherBox</value>
   </data>
-  <data name="logoutButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="storeLetter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 40</value>
   </data>
   <data name="searchPublisherText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
@@ -7580,7 +7565,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="searchAuthorText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
+    <value>189, 25</value>
   </data>
   <data name="searchAuthorText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>

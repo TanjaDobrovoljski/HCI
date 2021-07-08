@@ -33,8 +33,8 @@ namespace BookStore
         public UserForm(int bookStoreId)
         {
             InitializeComponent();
-
-            this.bookStoreId = bookStoreId;
+                       
+                this.bookStoreId = bookStoreId;
 
             if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
             {
@@ -100,7 +100,7 @@ namespace BookStore
                 text = new Label();
                 text.Width = 10;
                 text.Height = 28;
-                text.Text = list[i].getBook().getTitle()+" ("+list[i].getQuantity()+") \r\n"+ list[i].getPrice()+" KM";
+                text.Text = list[i].getBook().getTitle()+" ("+list[i].getQuantity()+") \r\n"+ list[i].getPrice().ToString().Insert(2,",")+" KM";
                 text.BackColor = Color.LightYellow;
                 text.TextAlign = ContentAlignment.MiddleCenter;
                 text.Dock = DockStyle.Bottom;
@@ -168,7 +168,7 @@ namespace BookStore
                     text = new Label();
                     text.Width = 10;
                     text.Height = 28;
-                    text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice() + " KM";
+                    text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice().ToString().Insert(2,",") + " KM";
                     text.BackColor = Color.LightYellow;
                     text.TextAlign = ContentAlignment.MiddleCenter;
                     text.Dock = DockStyle.Bottom;
@@ -224,7 +224,7 @@ namespace BookStore
                         text = new Label();
                         text.Width = 10;
                         text.Height = 28;
-                        text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice() + " KM";
+                        text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice().ToString().Insert(2,",") + " KM";
                         text.BackColor = Color.LightYellow;
                         text.TextAlign = ContentAlignment.MiddleCenter;
                         text.Dock = DockStyle.Bottom;
@@ -281,7 +281,7 @@ namespace BookStore
                     text = new Label();
                     text.Width = 10;
                     text.Height = 28;
-                    text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice() + " KM";
+                    text.Text = list[i].getBook().getTitle() + " (" + list[i].getQuantity() + ") \r\n" + list[i].getPrice().ToString().Insert(2,",") + " KM";
                     text.BackColor = Color.LightYellow;
                     text.TextAlign = ContentAlignment.MiddleCenter;
                     text.Dock = DockStyle.Bottom;

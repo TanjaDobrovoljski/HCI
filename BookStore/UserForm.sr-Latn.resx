@@ -649,27 +649,23 @@
         AEiHGQQAAACQDjMIAAAAIB1mEAAAAEA6zCAAAACANLj/+3/JJHiMqCSUUQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="flowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+  <data name="searchTitleText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 25</value>
   </data>
-  <data name="searchTitleBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="searchTitleText.Text" xml:space="preserve">
+    <value>Pretraga po naslovu..</value>
   </data>
-  <data name="searchTitleText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="searchAuthorText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
   </data>
-  <data name="searchAuthorBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="searchAuthorText.Text" xml:space="preserve">
+    <value>Pretraga po autoru..</value>
   </data>
-  <data name="searchAuthorText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
+  <data name="searchPublisherText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 25</value>
   </data>
-  <data name="searchPublisherBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="searchPublisherText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 288</value>
+  <data name="searchPublisherText.Text" xml:space="preserve">
+    <value>Pretraga po izdavaču..</value>
   </data>
   <data name="searchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1278,6 +1274,12 @@
         zDNPkXnmKTLPPEWHzqtebpfUuEDmjZN542TeOJk3TuaNEzi1q5dGybxb3er/B0lWbIIJOo+6AAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <data name="showAllButton.Text" xml:space="preserve">
+    <value>Prikaži sve</value>
+  </data>
+  <data name="logoutButton.Text" xml:space="preserve">
+    <value>Odjava</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7160,5 +7162,8 @@
         AB//////////gAPwAAAAAAA//////////8A//wAAAAAA///////////x///wAAAAAf//////////////
         ///gAA////////////////////////////8=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Katalog knjiga - Korisnik</value>
   </data>
 </root>
