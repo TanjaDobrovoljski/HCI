@@ -26,17 +26,7 @@ namespace BookStore
             
         }
         int lan = 0;
-        private void usernameText_Enter(object sender, EventArgs e)
-        {
-            if (usernameText.Text == "Username") lan = 1;
-
-            if (usernameText.Text == "Korisnicko ime" || usernameText.Text=="Username")
-            {
-                usernameText.Text = "";
-                usernameText.ForeColor = Color.Black;
-            }
-            
-        }
+     
 
         private void usernameText_Leave(object sender, EventArgs e)
         {
@@ -44,7 +34,7 @@ namespace BookStore
             {
                 usernameText.Text = "Korisnicko ime";
                 
-                usernameText.ForeColor = Color.Silver;
+                usernameText.ForeColor = Color.Gray;
             }
             else
             {
@@ -53,13 +43,14 @@ namespace BookStore
                     lan = 0;
                     usernameText.Text = "Username";
 
-                    usernameText.ForeColor = Color.Silver;
+                    usernameText.ForeColor = Color.Gray;
                 }
             }
         }
-
+      
         private void passwordText_Enter(object sender, EventArgs e)
         {
+            Console.WriteLine("vsav");
             if (passwordText.Text == "Password") lan = 1;
 
             if(passwordText.Text =="Lozinka"|| passwordText.Text=="Password")
@@ -74,7 +65,7 @@ namespace BookStore
             if (passwordText.Text == "" && lan!=1)
             {
                 passwordText.Text = "Lozinka";
-                passwordText.ForeColor = Color.Silver;
+                passwordText.ForeColor = Color.Gray;
             }
             else
             {
@@ -83,7 +74,7 @@ namespace BookStore
                     lan = 0;
                     passwordText.Text = "Password";
 
-                    passwordText.ForeColor = Color.Silver;
+                    passwordText.ForeColor = Color.Gray;
                 }
             }
 
@@ -135,7 +126,8 @@ namespace BookStore
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            if (usernameText.Text=="" || passwordText.Text == "" || passwordText.ForeColor == Color.Silver || usernameText.ForeColor == Color.Silver)
+            if (usernameText.Text == "" || passwordText.Text == "" || passwordText.ForeColor == Color.Gray || usernameText.ForeColor == Color.Gray)
+ 
             {
                 if (Thread.CurrentThread.CurrentCulture.Name == "sr-Latn")
                 {
@@ -149,7 +141,7 @@ namespace BookStore
                     ActiveControl = this.passwordText;
                     ActiveControl = this.usernameText;
                 }
-               }
+            } 
             else
             {
                 string userName = usernameText.Text;
@@ -161,6 +153,7 @@ namespace BookStore
                 {
                     if (UserDAO.Check_user(userName, hashPassw) == true)
                     {
+                        MessageBox.Show(userName);
                         Int32 admin = UserDAO.Check_Role(userName, hashPassw);
                         Console.WriteLine(admin);
                         if (admin == 1)
@@ -171,9 +164,9 @@ namespace BookStore
                             AdminForm f3 = new AdminForm(1, userName);
                             f3.ShowDialog();
                             Application.Exit();
-                           /* this.Close();
-                            this.usernameText.Text = "";
-                            this.passwordText.Text = "";*/
+                        //    this.Close();
+                        //    this.usernameText.Text = "";
+                        //    this.passwordText.Text = "";
                             // ActiveControl = this.usernameText;
 
                             //this.Show();
@@ -242,10 +235,6 @@ namespace BookStore
             
         }
 
-        private void usernameText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void englishButton_Click_1(object sender, EventArgs e)
         {
@@ -262,6 +251,18 @@ namespace BookStore
         private void LoginFrom_Load(object sender, EventArgs e)
         {
             InitializeComponent();
+        }
+
+        private void usernameText_Click(object sender, EventArgs e)
+        {
+           
+            if (usernameText.Text == "Username") lan = 1;
+
+            if (usernameText.Text == "Korisnicko ime" || usernameText.Text == "Username")
+            {
+                usernameText.Text = "";
+                usernameText.ForeColor = Color.Black;
+            }
         }
     }
 }

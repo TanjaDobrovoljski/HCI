@@ -42,14 +42,13 @@ namespace BookStore
             resources.ApplyResources(this.usernameText, "usernameText");
             this.usernameText.ForeColor = System.Drawing.Color.Gray;
             this.usernameText.Name = "usernameText";
-            this.usernameText.TextChanged += new System.EventHandler(this.usernameText_TextChanged);
-            this.usernameText.Enter += new System.EventHandler(this.usernameText_Enter);
+            this.usernameText.Click += new System.EventHandler(this.usernameText_Click);
             this.usernameText.Leave += new System.EventHandler(this.usernameText_Leave);
             // 
             // passwordText
             // 
             resources.ApplyResources(this.passwordText, "passwordText");
-            this.passwordText.ForeColor = System.Drawing.Color.Silver;
+            this.passwordText.ForeColor = System.Drawing.Color.Gray;
             this.passwordText.Name = "passwordText";
             this.passwordText.Enter += new System.EventHandler(this.passwordText_Enter);
             this.passwordText.Leave += new System.EventHandler(this.passwordText_Leave);
@@ -85,7 +84,6 @@ namespace BookStore
             this.Controls.Add(this.passwordText);
             this.Controls.Add(this.usernameText);
             this.Name = "LoginFrom";
-            this.Load += new System.EventHandler(this.LoginFrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
